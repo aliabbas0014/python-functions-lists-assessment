@@ -1,6 +1,8 @@
 
 <div align="center">
 
+<img src="assets/banner.png" width="100%" alt="Student Performance Management System Banner">
+
 # 🎓 Student Performance Management System
 
 ### Python Bootcamp — Assessment 02
@@ -10,7 +12,7 @@ A Python-based student result card generator and class marks analyzer.
 
 <br>
 
-<a href="https://aliabbas0014.github.io/python-functions-lists-assessment/">
+<a href="https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html">
   <img src="https://img.shields.io/badge/🚀_LIVE_DEMO-View_Website-245B8F?style=for-the-badge" alt="Live Demo">
 </a>
 <a href="https://github.com/aliabbas0014/python-functions-lists-assessment">
@@ -136,6 +138,9 @@ This program collects marks of multiple students and analyzes the overall class 
 
 ```text
 python-functions-lists-assessment/
+│
+├── assets/
+│   └── banner.png
 │
 ├── result_card_generator.py
 ├── class_marks_analyzer.py
@@ -265,18 +270,24 @@ Marks in Descending Order:
 
 ## 🌐 Live Demo
 
-The `demo.html` file provides a visual representation of both Python applications.
+Explore the visual preview of both Python applications:
 
-It includes:
+<div align="center">
+
+<a href="https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html">
+  <img src="https://img.shields.io/badge/OPEN_LIVE_WEBSITE-245B8F?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Open Live Website">
+</a>
+
+</div>
+
+The demo includes:
 - Student result card preview.
 - Class performance dashboard.
 - Marks and percentage overview.
 - Highest and lowest marks.
 - Pass/fail statistics.
 
-**Important:** The HTML demo is a static visual preview. It is not directly connected to the Python programs.
-
-To view the demo online, enable GitHub Pages from the repository's **Settings → Pages** and select the `main` branch with the root folder.
+**Note:** The HTML demo is a static visual preview and is not directly connected to the Python programs.
 
 ## 🎯 Learning Outcomes
 
