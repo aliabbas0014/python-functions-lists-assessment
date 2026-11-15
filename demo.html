@@ -1,0 +1,1168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#245b8f">
+  <title>Python Functions & Lists | Assessment 2</title>
+
+  <style>
+    :root {
+      --blue: #245b8f;
+      --blue-dark: #183f65;
+      --amber: #d58b52;
+      --ink: #293747;
+      --muted: #718092;
+      --paper: #f3f0e8;
+      --white: #fffefa;
+      --line: #e6e1d7;
+      --green: #3c806b;
+      --red: #b85e58;
+      --shadow: 0 18px 50px rgba(41,55,71,.09);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: auto;
+      padding: 28px 24px 60px;
+    }
+
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 26px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      color: white;
+      background: var(--blue);
+      font-size: 20px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .top-tag {
+      border: 1px solid #d9d2c5;
+      color: #687586;
+      border-radius: 30px;
+      padding: 8px 13px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* Hero section */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: 48px;
+      color: white;
+      background: linear-gradient(
+        120deg,
+        #183f65 0%,
+        #245b8f 72%,
+        #397aa9 100%
+      );
+      box-shadow: var(--shadow);
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      border: 1px solid #ffffff24;
+      border-radius: 50%;
+      right: -65px;
+      top: -145px;
+      box-shadow:
+        0 0 0 35px #ffffff0b,
+        0 0 0 75px #ffffff08;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+    }
+
+    .hero .eyebrow {
+      color: #f1bd8c;
+    }
+
+    h1 {
+      margin: 12px 0 14px;
+      max-width: 680px;
+      font-family: Georgia, serif;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -.04em;
+    }
+
+    .hero p {
+      color: #e3edf5;
+      max-width: 620px;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .pill {
+      border: 1px solid #ffffff3a;
+      background: #ffffff12;
+      border-radius: 30px;
+      padding: 7px 12px;
+      font-size: 12px;
+      color: #f5f7fa;
+    }
+
+    /* Sections */
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin: 38px 0 17px;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, serif;
+      font-size: 28px;
+      letter-spacing: -.03em;
+    }
+
+    .section-head p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: #617083;
+      padding: 10px 15px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 750;
+      transition: .2s ease;
+    }
+
+    .tab:hover {
+      transform: translateY(-2px);
+      border-color: #9db5ca;
+    }
+
+    .tab.active {
+      color: white;
+      background: var(--blue);
+      border-color: var(--blue);
+      box-shadow: 0 7px 16px #245b8f2b;
+    }
+
+    .panel {
+      display: none;
+      animation: rise .35s ease both;
+    }
+
+    .panel.active {
+      display: block;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 23px;
+      box-shadow: 0 8px 25px #29374708;
+    }
+
+    .card-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .card-title h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .mini-label {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    .status {
+      color: var(--green);
+      background: #e8f2ed;
+      padding: 5px 9px;
+      border-radius: 30px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    /* Result card */
+
+    .student-line {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .avatar {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: #e8eef5;
+      color: var(--blue);
+      font-weight: 850;
+    }
+
+    .student-line strong {
+      display: block;
+      font-size: 15px;
+    }
+
+    .student-line small {
+      color: var(--muted);
+    }
+
+    .result-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    .stat {
+      background: #f5f3ed;
+      border-radius: 14px;
+      padding: 13px;
+    }
+
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 3px;
+      font-size: 22px;
+      color: var(--blue-dark);
+    }
+
+    .subject-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .subject-row {
+      display: grid;
+      grid-template-columns: 110px 1fr 35px;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+    }
+
+    .track {
+      height: 8px;
+      background: #ece9e1;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .fill {
+      height: 100%;
+      border-radius: 20px;
+      background: linear-gradient(90deg, var(--blue), #78a6c8);
+      animation: grow .8s ease both;
+      transform-origin: left;
+    }
+
+    @keyframes grow {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    .grade-box {
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: #f8f5ed;
+    }
+
+    .grade-circle {
+      width: 118px;
+      height: 118px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 8px solid #d8e5ee;
+      color: var(--blue);
+      font-family: Georgia, serif;
+      font-size: 42px;
+      font-weight: bold;
+      background: white;
+      box-shadow: 0 8px 24px #245b8f14;
+    }
+
+    .grade-box h3 {
+      margin: 16px 0 2px;
+    }
+
+    .grade-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .note {
+      margin-top: 15px;
+      padding: 12px 14px;
+      border-left: 3px solid var(--amber);
+      background: #fbf2e8;
+      border-radius: 0 10px 10px 0;
+      color: #75573e;
+      font-size: 12px;
+    }
+
+    /* Class analyzer */
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 13px;
+      margin-bottom: 18px;
+    }
+
+    .metric {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      padding: 17px;
+    }
+
+    .metric .symbol {
+      color: var(--amber);
+      font-size: 18px;
+    }
+
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 7px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 25px;
+      margin-top: 2px;
+      color: var(--blue-dark);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 450px;
+    }
+
+    th {
+      text-align: left;
+      color: var(--muted);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      padding: 11px 9px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    td {
+      padding: 13px 9px;
+      border-bottom: 1px solid #efede7;
+      font-size: 13px;
+    }
+
+    tbody tr {
+      transition: background .2s;
+    }
+
+    tbody tr:hover {
+      background: #f8f6f0;
+    }
+
+    .mark {
+      font-weight: 800;
+      color: var(--blue-dark);
+    }
+
+    .pass {
+      color: var(--green);
+      background: #e8f2ed;
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .fail {
+      color: var(--red);
+      background: #f8eae8;
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 70px 1fr 30px;
+      align-items: center;
+      gap: 10px;
+      margin: 13px 0;
+      font-size: 12px;
+    }
+
+    .bar-track {
+      height: 10px;
+      background: #eeece5;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: var(--amber);
+      border-radius: 20px;
+    }
+
+    .above-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .above-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 11px 12px;
+      border-radius: 11px;
+      background: #f5f3ed;
+      font-size: 13px;
+    }
+
+    /* Concepts */
+
+    .concepts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .concept {
+      padding: 17px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      transition: .2s;
+    }
+
+    .concept:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .concept b {
+      display: block;
+      color: var(--blue);
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    .concept span {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    footer {
+      margin-top: 42px;
+      border-top: 1px solid #ded8cc;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer strong {
+      color: var(--ink);
+    }
+
+    /* Responsive design */
+
+    @media(max-width: 800px) {
+      .hero {
+        padding: 34px 27px;
+      }
+
+      .grid,
+      .analysis-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .concepts {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 520px) {
+      .page {
+        padding: 17px 14px 40px;
+      }
+
+      .topline {
+        align-items: flex-start;
+      }
+
+      .top-tag {
+        font-size: 10px;
+      }
+
+      .hero {
+        border-radius: 21px;
+        padding: 29px 22px;
+      }
+
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .result-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .subject-row {
+        grid-template-columns: 90px 1fr 28px;
+      }
+
+      .concepts {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <!-- Header -->
+
+    <div class="topline">
+
+      <div class="brand">
+        <div class="brand-mark">∑</div>
+
+        <div>
+          PYTHON <span style="color:var(--blue)">LAB</span>
+          <div class="mini-label">Assessment showcase</div>
+        </div>
+      </div>
+
+      <div class="top-tag">
+        ASSESSMENT 02 · 2-DAY TASK
+      </div>
+
+    </div>
+
+    <!-- Hero section -->
+
+    <header class="hero">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          Functions · Strings · Lists
+        </div>
+
+        <h1>
+          Turning student marks into meaningful results.
+        </h1>
+
+        <p>
+          Two practical Python programs: one creates an individual
+          student result card, while the other explores the performance
+          of an entire class.
+        </p>
+
+        <div class="hero-meta">
+          <span class="pill">Python 3</span>
+          <span class="pill">Custom Functions</span>
+          <span class="pill">Input Validation</span>
+          <span class="pill">List Analysis</span>
+        </div>
+
+      </div>
+
+    </header>
+
+    <!-- Application navigation -->
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">Interactive preview</div>
+        <h2>Explore the applications</h2>
+        <p>Illustrative sample data based on the assessment programs.</p>
+      </div>
+
+      <div class="tabs" role="tablist">
+
+        <button
+          class="tab active"
+          data-target="result"
+          role="tab"
+          aria-selected="true">
+
+          01 · Result Card
+
+        </button>
+
+        <button
+          class="tab"
+          data-target="class"
+          role="tab"
+          aria-selected="false">
+
+          02 · Class Analyzer
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- Task 1 -->
+
+    <section class="panel active" id="result" role="tabpanel">
+
+      <div class="grid">
+
+        <article class="card">
+
+          <div class="card-title">
+            <h3>Student result overview</h3>
+            <span class="status">PASS</span>
+          </div>
+
+          <div class="student-line">
+
+            <div class="avatar">AA</div>
+
+            <div>
+              <strong>Ali Abbas</strong>
+              <small>Roll Number: 12345</small>
+            </div>
+
+          </div>
+
+          <div class="result-stats">
+
+            <div class="stat">
+              <span>Total obtained</span>
+              <strong>450/500</strong>
+            </div>
+
+            <div class="stat">
+              <span>Percentage</span>
+              <strong>90.00%</strong>
+            </div>
+
+            <div class="stat">
+              <span>Final grade</span>
+              <strong>A+</strong>
+            </div>
+
+          </div>
+
+          <div class="card-title">
+            <h3>Subject-wise marks</h3>
+            <span class="mini-label">Out of 100</span>
+          </div>
+
+          <div class="subject-list">
+
+            <div class="subject-row">
+              <span>English</span>
+              <div class="track">
+                <div class="fill" style="width:95%"></div>
+              </div>
+              <b>95</b>
+            </div>
+
+            <div class="subject-row">
+              <span>Mathematics</span>
+              <div class="track">
+                <div class="fill" style="width:90%"></div>
+              </div>
+              <b>90</b>
+            </div>
+
+            <div class="subject-row">
+              <span>Computer</span>
+              <div class="track">
+                <div class="fill" style="width:88%"></div>
+              </div>
+              <b>88</b>
+            </div>
+
+            <div class="subject-row">
+              <span>Physics</span>
+              <div class="track">
+                <div class="fill" style="width:92%"></div>
+              </div>
+              <b>92</b>
+            </div>
+
+            <div class="subject-row">
+              <span>Chemistry</span>
+              <div class="track">
+                <div class="fill" style="width:85%"></div>
+              </div>
+              <b>85</b>
+            </div>
+
+          </div>
+
+        </article>
+
+        <aside class="card grade-box">
+
+          <div class="mini-label">
+            Overall achievement
+          </div>
+
+          <div class="grade-circle">
+            A+
+          </div>
+
+          <h3>Excellent performance</h3>
+
+          <p>
+            All subject marks meet the minimum passing requirement.
+          </p>
+
+          <div class="note">
+            Assessment rule: a mark below 40 in even one subject makes
+            the final status Fail, regardless of the overall percentage.
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+    <!-- Task 2 -->
+
+    <section class="panel" id="class" role="tabpanel">
+
+      <div class="metrics">
+
+        <div class="metric">
+          <div class="symbol">◉</div>
+          <span>Students in class</span>
+          <strong>5</strong>
+        </div>
+
+        <div class="metric">
+          <div class="symbol">↗</div>
+          <span>Class average</span>
+          <strong>72.00</strong>
+        </div>
+
+        <div class="metric">
+          <div class="symbol">★</div>
+          <span>Highest marks</span>
+          <strong>95</strong>
+        </div>
+
+        <div class="metric">
+          <div class="symbol">↓</div>
+          <span>Lowest marks</span>
+          <strong>45</strong>
+        </div>
+
+      </div>
+
+      <article class="card">
+
+        <div class="card-title">
+          <h3>Student marks register</h3>
+          <span class="mini-label">Sample class · 5 records</span>
+        </div>
+
+        <div class="table-wrap">
+
+          <table>
+
+            <thead>
+              <tr>
+                <th>Student</th>
+                <th>Marks</th>
+                <th>Result</th>
+                <th>Class standing</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>Ali</td>
+                <td class="mark">85</td>
+                <td><span class="pass">PASS</span></td>
+                <td>Above average</td>
+              </tr>
+
+              <tr>
+                <td>Ahmed</td>
+                <td class="mark">45</td>
+                <td><span class="fail">FAIL</span></td>
+                <td>Below average</td>
+              </tr>
+
+              <tr>
+                <td>Sara</td>
+                <td class="mark">95</td>
+                <td><span class="pass">PASS</span></td>
+                <td>Above average</td>
+              </tr>
+
+              <tr>
+                <td>Usman</td>
+                <td class="mark">60</td>
+                <td><span class="pass">PASS</span></td>
+                <td>Below average</td>
+              </tr>
+
+              <tr>
+                <td>Ayesha</td>
+                <td class="mark">75</td>
+                <td><span class="pass">PASS</span></td>
+                <td>Above average</td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </article>
+
+      <div class="analysis-grid">
+
+        <article class="card">
+
+          <div class="card-title">
+            <h3>Marks comparison</h3>
+            <span class="mini-label">Out of 100</span>
+          </div>
+
+          <div class="bar-row">
+            <span>Sara</span>
+            <div class="bar-track">
+              <div class="bar-fill" style="width:95%"></div>
+            </div>
+            <b>95</b>
+          </div>
+
+          <div class="bar-row">
+            <span>Ali</span>
+            <div class="bar-track">
+              <div class="bar-fill" style="width:85%"></div>
+            </div>
+            <b>85</b>
+          </div>
+
+          <div class="bar-row">
+            <span>Ayesha</span>
+            <div class="bar-track">
+              <div class="bar-fill" style="width:75%"></div>
+            </div>
+            <b>75</b>
+          </div>
+
+          <div class="bar-row">
+            <span>Usman</span>
+            <div class="bar-track">
+              <div class="bar-fill" style="width:60%"></div>
+            </div>
+            <b>60</b>
+          </div>
+
+          <div class="bar-row">
+            <span>Ahmed</span>
+            <div class="bar-track">
+              <div class="bar-fill" style="width:45%"></div>
+            </div>
+            <b>45</b>
+          </div>
+
+        </article>
+
+        <article class="card">
+
+          <div class="card-title">
+            <h3>Above class average</h3>
+            <span class="mini-label">Average: 72.00</span>
+          </div>
+
+          <div class="above-list">
+
+            <div class="above-item">
+              <span>Sara</span>
+              <strong>95 marks</strong>
+            </div>
+
+            <div class="above-item">
+              <span>Ali</span>
+              <strong>85 marks</strong>
+            </div>
+
+            <div class="above-item">
+              <span>Ayesha</span>
+              <strong>75 marks</strong>
+            </div>
+
+          </div>
+
+          <div class="note">
+            Pass: 4 students &nbsp; · &nbsp; Fail: 1 student
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- Python concepts -->
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">What this assessment practices</div>
+        <h2>Python concepts in action</h2>
+        <p>Core techniques used across both programs.</p>
+      </div>
+
+    </div>
+
+    <section class="concepts">
+
+      <div class="concept">
+        <b>Functions</b>
+        <span>Reusable code with parameters and return values.</span>
+      </div>
+
+      <div class="concept">
+        <b>String methods</b>
+        <span>Clean and validate text using strip(), title() and isdigit().</span>
+      </div>
+
+      <div class="concept">
+        <b>Lists</b>
+        <span>Store and process multiple student records.</span>
+      </div>
+
+      <div class="concept">
+        <b>Loops</b>
+        <span>Repeat input and analyze student marks.</span>
+      </div>
+
+      <div class="concept">
+        <b>Conditions</b>
+        <span>Apply grading rules and pass/fail checks.</span>
+      </div>
+
+      <div class="concept">
+        <b>Validation</b>
+        <span>Check ranges and handle invalid numeric input.</span>
+      </div>
+
+      <div class="concept">
+        <b>Built-in tools</b>
+        <span>Use sum(), len(), max(), min() and sorted().</span>
+      </div>
+
+      <div class="concept">
+        <b>F-strings</b>
+        <span>Present calculated results in a readable format.</span>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+      <div>
+        <strong>Python Functions & Lists Assessment</strong>
+        <br>
+        Academic programming practice · Assessment 02
+      </div>
+
+      <div>
+        Developed by <strong>Ali Abbas</strong>
+        <br>
+        Visual preview · Sample data only
+      </div>
+
+    </footer>
+
+  </main>
+
+  <!-- Interactive tab switching -->
+
+  <script>
+
+    const tabs = document.querySelectorAll(".tab");
+    const panels = document.querySelectorAll(".panel");
+
+    tabs.forEach((tab) => {
+
+      tab.addEventListener("click", () => {
+
+        tabs.forEach((item) => {
+
+          item.classList.remove("active");
+          item.setAttribute("aria-selected", "false");
+
+        });
+
+        panels.forEach((panel) => {
+          panel.classList.remove("active");
+        });
+
+        tab.classList.add("active");
+
+        tab.setAttribute("aria-selected", "true");
+
+        document
+          .getElementById(tab.dataset.target)
+          .classList.add("active");
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
