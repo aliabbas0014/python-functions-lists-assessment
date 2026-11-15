@@ -1,156 +1,164 @@
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Georgia&weight=600&size=28&duration=2800&pause=900&color=245B8F&center=true&vCenter=true&width=720&lines=Python+Functions+%26+Lists+Assessment;Student+Results+%7C+Class+Performance" alt="Typing SVG" />
+
 # Python Functions and Lists Assessment
 
-**Student Name:** Ali Abbas  
-**Project Name:** Python Functions and Lists Assessment  
-**Programming Language:** Python
+**Functions · Strings · Lists · Loops**
+
+[![Language](https://img.shields.io/badge/Language-Python-245B8F?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Assessment](https://img.shields.io/badge/Assessment-2-D58B52?style=for-the-badge)](#)
+[![Status](https://img.shields.io/badge/Status-Completed-3C806B?style=for-the-badge)](#)
+
+*A collection of two command-line applications created to practice core Python programming concepts.*
+
+</div>
+
+---
 
 ## 1. Project Overview
 
-This project contains two Python programs developed as part of the Functions, Strings and Lists assessment.
+This repository contains two Python programs developed for the **Functions, Strings and Lists Assessment**.
 
-The purpose of this project is to practice Python functions, string manipulation, lists, loops, conditional statements and input validation through simple practical programs.
+The programs apply Python concepts to common academic tasks: generating an individual student's result card and analyzing the marks of a class.
 
-## 2. Programs Description
+The assessment focuses on writing reusable functions, working with strings and lists, validating user input, using loops, and presenting calculated information clearly.
 
-### Task 1: Student Result Card Generator
+## 2. Applications
 
-File: `result_card_generator.py`
+### Task 1 — Student Result Card Generator
 
-This program generates a result card for one student.
+**File:** `result_card_generator.py`
 
-**Main features:**
-- Takes the student's name and roll number as input.
-- Takes marks in five different subjects.
-- Checks that marks are between 0 and 100.
-- Validates the roll number using `isdigit()`.
-- Formats the student's name using `strip()` and `title()`.
+Generates a formatted result card for one student using marks from five subjects.
+
+**Main features**
+- Collects the student's name, roll number, and marks in five subjects.
+- Validates the roll number with `isdigit()`.
+- Checks that each subject mark is between 0 and 100.
+- Cleans and formats the student's name with `strip()` and `title()`.
 - Calculates total marks and percentage.
-- Assigns a grade according to the given grading criteria.
-- Checks whether any subject has marks below 40.
-- Displays the final result card with Pass or Fail status.
+- Assigns a grade from A+ to Fail.
+- Sets the final status to Fail if any subject mark is below 40.
+- Displays a formatted result card using f-strings.
 
-**Functions used:**
+**Functions used**
 
 | Function | Purpose |
 |---|---|
-| `format_name()` | Removes extra spaces and formats the student's name. |
-| `get_valid_marks()` | Takes marks and checks their validity. |
-| `calculate_percentage()` | Calculates the overall percentage. |
-| `get_grade()` | Assigns a grade according to percentage. |
-| `get_valid_roll_number()` | Checks that the roll number contains digits only. |
+| `format_name(name)` | Removes surrounding spaces and formats the name. |
+| `get_valid_marks(subject)` | Requests and validates a subject's marks. |
+| `calculate_percentage(total, max_total)` | Calculates the overall percentage. |
+| `get_grade(percentage)` | Returns a grade based on the percentage. |
+| `get_valid_roll_number()` | Accepts a roll number containing digits only. |
 
-### Task 2: Class Marks Analyzer
+**Grading criteria**
 
-File: `class_marks_analyzer.py`
+| Percentage | Grade |
+|---:|:---:|
+| 90 and above | A+ |
+| 80–89 | A |
+| 70–79 | B |
+| 60–69 | C |
+| 50–59 | D |
+| Below 50 | Fail |
 
-This program analyzes the academic performance of an entire class.
+> **Subject rule:** If a student scores below 40 in any subject, the final status is Fail, regardless of the overall percentage.
 
-**Main features:**
-- Takes the total number of students as input.
-- Stores student names and marks in two separate lists.
-- Uses `append()` to add student information.
-- Validates marks between 0 and 100.
+### Task 2 — Class Marks Analyzer
+
+**File:** `class_marks_analyzer.py`
+
+Collects student names and marks, then analyzes the academic performance of the class.
+
+**Main features**
+- Asks for the number of students.
+- Stores names and marks in two separate lists.
+- Uses `append()` to add each student's information.
+- Validates marks within the range of 0–100.
 - Calculates the class average.
-- Finds the highest and lowest marks.
-- Displays the names of students with the highest and lowest marks.
-- Counts passing and failing students.
+- Finds the highest and lowest marks and identifies the students who achieved them.
+- Counts passing students (50 or above) and failing students (below 50).
 - Displays students who scored above the class average.
 - Sorts marks from highest to lowest.
+- Displays all student records.
 
-**Custom functions used:**
+**Custom functions used**
 
 | Function | Purpose |
 |---|---|
-| `get_student_count()` | Takes and validates the number of students. |
-| `get_valid_marks()` | Takes valid marks for each student. |
-| `calculate_average()` | Calculates the class average. |
-| `display_highest_lowest()` | Displays highest and lowest marks with student names. |
-| `count_pass_fail()` | Counts passing and failing students. |
+| `get_student_count()` | Validates the number of students. |
+| `get_valid_marks(student_name)` | Requests and validates a student's marks. |
+| `calculate_average(student_marks)` | Calculates the class average. |
+| `display_highest_lowest(student_names, student_marks)` | Displays highest and lowest marks with student names. |
+| `count_pass_fail(student_marks)` | Returns the number of passing and failing students. |
 
-## 3. Python Concepts and Techniques Used
+## 3. Python Concepts Used
 
-The following Python concepts are used in both programs:
+| Concept | How it is used |
+|---|---|
+| Functions (`def`) | Divides programs into reusable tasks. |
+| Parameters and `return` | Passes information into functions and returns results. |
+| String methods | Uses `strip()`, `title()`, and `isdigit()`. |
+| Lists | Stores multiple student names and marks. |
+| List methods and built-ins | Uses `append()`, `len()`, `sum()`, `max()`, `min()`, and `sorted()`. |
+| Loops | Uses `for` and `while` to collect and process information. |
+| Conditional statements | Uses `if`, `elif`, and `else` for validation and decisions. |
+| Exception handling | Uses `try` and `except` to handle invalid numeric input. |
+| F-strings | Displays formatted values and result information. |
+| Comments and indentation | Keeps code understandable and properly structured. |
+| Dot operator | Accesses methods such as `name.strip()` and `student_names.append()`. |
 
-**1. Functions (`def`)**
+## 4. Project Structure
 
-Functions are used to divide the program into smaller reusable parts. This makes the code easier to manage and reduces repetition.
+```text
+python-functions-lists-assessment/
+│
+├── result_card_generator.py
+├── class_marks_analyzer.py
+├── demo.html
+└── README.md
+```
 
-**2. Parameters and Return**
+`demo.html` is a visual, browser-based preview of the two Python applications. It presents illustrative sample data; it does not execute or connect to the Python terminal programs.
 
-Parameters allow functions to receive information, while `return` sends the calculated result back to the part of the program that called the function.
+## 5. Requirements
 
-**3. String Manipulation**
+- Python 3 installed on your computer.
+- Visual Studio Code or another Python-supported editor.
+- A terminal or command prompt.
 
-- `strip()` removes extra spaces from the beginning and end of a string.
-- `title()` makes the first letter of each word capital.
-- `isdigit()` checks whether a string contains digits only.
+No third-party Python packages are required.
 
-**4. Lists**
+## 6. How to Run
 
-Lists are used to store multiple student names and marks.
+1. Clone or download this repository.
+2. Open the project folder in Visual Studio Code.
+3. Open the integrated terminal.
+4. Run either program separately.
 
-- `append()` adds new items to a list.
-- `len()` returns the number of items.
-- `sum()` calculates the total of marks.
-- `max()` finds the highest value.
-- `min()` finds the lowest value.
-- `sorted()` sorts values in ascending or descending order.
-
-**5. Loops**
-
-`for` and `while` loops are used to repeat instructions and process student information.
-
-**6. Conditional Statements**
-
-`if`, `elif` and `else` are used to check conditions, assign grades and determine pass/fail status.
-
-**7. Input Validation and Exception Handling**
-
-`try` and `except` are used to handle invalid numeric inputs and prevent the program from stopping unexpectedly.
-
-**8. F-Strings**
-
-F-strings are used to display variables and calculated results in a readable format.
-
-**9. Comments and Indentation**
-
-Comments explain the purpose of important code sections. Proper indentation maintains the structure of Python code.
-
-**10. Dot Operator (`.`)**
-
-The dot operator is used to access methods associated with an object. For example, `name.strip()` calls the `strip()` method on the name string, while `student_names.append()` calls the `append()` method on a list.
-
-## 4. How to Run the Programs
-
-**Requirements:**
-- Python installed on your computer.
-- Visual Studio Code or any Python-supported editor.
-
-**Step 1:** Download or clone this repository.
-
-**Step 2:** Open the project folder in Visual Studio Code.
-
-**Step 3:** Open the terminal and run the following commands separately.
-
-To run Task 1:
+**Run Task 1:**
 
 ```bash
 py result_card_generator.py
 ```
 
-To run Task 2:
+**Run Task 2:**
 
 ```bash
 py class_marks_analyzer.py
 ```
 
-Follow the instructions displayed in the terminal and enter the required information.
+Follow the prompts in the terminal and enter the requested information.
 
-## 5. Sample Input and Output
+To view the visual preview, open `demo.html` in a web browser.
 
-### Task 1: Student Result Card Generator
+## 7. Sample Input and Output
 
-**Sample Input:**
+### Task 1 — Student Result Card Generator
+
+**Sample input**
 
 ```text
 Student Name: Ali Abbas
@@ -162,29 +170,30 @@ Physics: 92
 Chemistry: 85
 ```
 
-**Sample Output:**
+**Sample output**
 
 ```text
 STUDENT RESULT CARD
 
-Student Name: Ali Abbas
-Roll Number: 12345
+Student Name       : Ali Abbas
+Roll Number        : 12345
 
-English: 95
-Mathematics: 90
-Computer: 88
-Physics: 92
-Chemistry: 85
+SUBJECTS AND MARKS
+English            : 95
+Mathematics        : 90
+Computer           : 88
+Physics            : 92
+Chemistry          : 85
 
-Total Obtained: 450 / 500
-Percentage: 90.00%
-Grade: A+
-Final Status: Pass
+Total Obtained     : 450 / 500
+Percentage         : 90.00%
+Grade              : A+
+Final Status       : Pass
 ```
 
-### Task 2: Class Marks Analyzer
+### Task 2 — Class Marks Analyzer
 
-**Sample Input:**
+**Sample input**
 
 ```text
 Number of Students: 5
@@ -196,17 +205,19 @@ Usman: 60
 Ayesha: 75
 ```
 
-**Sample Output:**
+**Sample output**
 
 ```text
-Class Average: 72.00
-
 Highest Marks: 95
-Student: Sara
+Student(s) with Highest Marks:
+Sara
 
 Lowest Marks: 45
-Student: Ahmed
+Student(s) with Lowest Marks:
+Ahmed
 
+===== CLASS PERFORMANCE =====
+Class Average: 72.00
 Passing Students: 4
 Failing Students: 1
 
@@ -215,24 +226,26 @@ Ali: 85
 Sara: 95
 Ayesha: 75
 
-Marks Sorted:
+Marks Sorted (Highest to Lowest):
 [95, 85, 75, 60, 45]
 ```
 
-## 6. Project Structure
+## 8. Learning Outcomes
 
-```text
-python-functions-lists-assessment/
-│
-├── result_card_generator.py
-├── class_marks_analyzer.py
-└── README.md
-```
+By completing this assessment, I practiced:
+- Creating and calling functions with parameters and return values.
+- Cleaning and validating string input.
+- Creating and updating lists.
+- Using loops to process multiple student records.
+- Applying conditions to grades and class performance.
+- Handling invalid input and displaying readable output.
 
-## 7. Conclusion
+---
 
-Through this assessment, I practiced Python functions, strings, lists, loops, conditional statements and input validation.
+<div align="center">
 
-Both programs helped me understand how basic Python concepts can be used to solve practical problems.
+**Developed by Ali Abbas**
 
-**Developed by: Ali Abbas**
+*Python Functions and Lists Assessment*
+
+</div>
