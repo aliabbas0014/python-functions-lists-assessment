@@ -1,10 +1,9 @@
-
 <div align="center">
 
 <a href="https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html">
 <img src="https://img.shields.io/badge/STUDENT_PERFORMANCE_MANAGEMENT_SYSTEM-245B8F?style=for-the-badge&labelColor=293747" width="100%" alt="Student Performance Management System">
 </a>
-# 🎓 Student Performance Management System
+🎓 Student Performance Management System
 
 ### Python Bootcamp — Assessment 02
 **Functions · Strings · Lists**
