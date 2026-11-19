@@ -1,0 +1,53 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="190" viewBox="0 0 1200 190">
+  <defs>
+    <linearGradient id="footerBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#172554"/>
+      <stop offset="50%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="footerLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#c4b5fd"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="190" rx="24" fill="url(#footerBg)"/>
+
+  <circle cx="90" cy="30" r="120" fill="#ffffff" opacity=".05"/>
+  <circle cx="1100" cy="170" r="130" fill="#ffffff" opacity=".06"/>
+
+  <path d="M0 25 Q300 100 600 35 T1200 45"
+        fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="2"/>
+
+  <path d="M0 155 Q300 90 600 155 T1200 145"
+        fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="2"/>
+
+  <text x="600" y="75"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-family="Arial, sans-serif"
+        font-size="30"
+        font-weight="700">
+    Thanks for Exploring!
+  </text>
+
+  <rect x="510" y="94" width="180" height="3" rx="2"
+        fill="url(#footerLine)"/>
+
+  <text x="600" y="127"
+        text-anchor="middle"
+        fill="#e0e7ff"
+        font-family="Arial, sans-serif"
+        font-size="17">
+    Python Bootcamp • Assessment 02
+  </text>
+
+  <text x="600" y="155"
+        text-anchor="middle"
+        fill="#dbeafe"
+        font-family="Arial, sans-serif"
+        font-size="13">
+    LEARNING BY BUILDING  •  IMPROVING THROUGH PRACTICE
+  </text>
+</svg>
