@@ -1,233 +1,191 @@
-&#x20;\<div align="center">
+ <div align="center">
 
-\<a href="[https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html](https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html)">
-\<img src="[https://img.shields.io/badge/STUDENT_PERFORMANCE_MANAGEMENT_SYSTEM-245B8F?style=for-the-badge&labelColor=293747](https://img.shields.io/badge/STUDENT_PERFORMANCE_MANAGEMENT_SYSTEM-245B8F?style=for-the-badge\&labelColor=293747)" width="100%" alt="Student Performance Management System">
-\</a>
+# Python Functions & Lists — Assessment 02
 
-# 🎓 Student Performance Management System
+### Python Bootcamp | Assessment 02
 
-### Python Bootcamp — Assessment 02
+**A practical Python project demonstrating Functions, Strings, Lists, Input Validation, and Data Analysis.**
 
-**Functions · Strings · Lists**
+<br>
 
-A Python-based student result card generator and class marks analyzer.
+<a href="https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html">
+  <img src="assets/svg-buttons/live-demo.svg" alt="View Live Demo">
+</a>
+<a href="https://github.com/aliabbas0014/python-functions-lists-assessment">
+  <img src="assets/svg-buttons/source-code.svg" alt="View Source Code">
+</a>
+<a href="#project-documentation">
+  <img src="assets/svg-buttons/explore-project.svg" alt="Explore Project">
+</a>
 
-\<br>
+<br>
 
-\<a href="[https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html](https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html)">\<img src="assets/svg-buttons/live-demo.svg" alt="Live Demo">\</a>
-\<a href="[https://github.com/aliabbas0014/python-functions-lists-assessment](https://github.com/aliabbas0014/python-functions-lists-assessment)">\<img src="assets/svg-buttons/source-code.svg" alt="Source Code">\</a>
-\<a href="#project-overview">\<img src="assets/svg-buttons/explore-project.svg" alt="Explore Project">\</a>
-
-\<br>\<br>
-
-\<img src="[https://img.shields.io/badge/Python-3.x-245B8F?style=flat-square&logo=python&logoColor=white](https://img.shields.io/badge/Python-3.x-245B8F?style=flat-square\&logo=python\&logoColor=white)"> \<img src="[https://img.shields.io/badge/Assessment-02-D58B52?style=flat-square](https://img.shields.io/badge/Assessment-02-D58B52?style=flat-square)"> \<img src="[https://img.shields.io/badge/Concepts-Functions%20%7C%20Strings%20%7C%20Lists-293747?style=flat-square](https://img.shields.io/badge/Concepts-Functions%20%7C%20Strings%20%7C%20Lists-293747?style=flat-square)">
-
-\<br>\<br>
-
-\<img src="[https://readme-typing-svg.demolab.com?font=Georgia&weight=600&size=22&duration=3000&pause=1000&color=245B8F&center=true&vCenter=true&width=650&lines=Student+Result+Card+Generator;Class+Marks+Analyzer;Learning+Python+Through+Practical+Projects](https://readme-typing-svg.demolab.com?font=Georgia\&weight=600\&size=22\&duration=3000\&pause=1000\&color=245B8F\&center=true\&vCenter=true\&width=650\&lines=Student+Result+Card+Generator;Class+Marks+Analyzer;Learning+Python+Through+Practical+Projects)" alt="Typing SVG">
-
-\</div>
+</div>
 
 ---
-
-\<a id="project-overview">\</a>
 
 ## 📌 Project Overview
 
-This project is developed as part of **Python Bootcamp Assessment 02**, focusing on the practical implementation of Python functions, strings, lists, loops, and conditional statements.
+This repository contains two Python console-based applications developed as part of **Assessment 02** of the Python Bootcamp.
 
-The project contains two independent Python applications:
+The main purpose of this assessment is to practice Python functions, string manipulation, lists, loops, conditional statements, and input validation through practical programming tasks.
 
-1. **Student Result Card Generator** — collects student information and subject marks to calculate and display an individual result.
-2. **Class Marks Analyzer** — collects multiple students' marks and analyzes overall class performance.
+### Applications Included
 
-A separate HTML demo page is also included to provide a visual preview of both applications.
-
----
-
-# 🚀 Application 01 — Student Result Card Generator
-
-\<text align="center"> \</text>
-
-**Python File:** `result_card_generator.py`
-
-This program collects a student's name, roll number, and marks in five subjects. It then calculates the total marks and percentage, determines the grade, and generates a formatted result card.
-
-### ✨ Main Features
-
-- Takes the student's name and roll number.
-- Accepts marks in five subjects.
-- Validates marks between 0 and 100.
-- Checks that the roll number contains digits only.
-- Formats the student's name using string methods.
-- Calculates total marks and percentage.
-- Assigns a grade based on the percentage.
-- Checks individual subject marks for passing criteria.
-- Displays a complete student result card.
-
-### ⚙️ Functions Used
-
-| Function                  | Purpose                                |
-| ------------------------- | -------------------------------------- |
-| `format_name()`           | Cleans and formats the student's name. |
-| `get_valid_marks()`       | Accepts and validates subject marks.   |
-| `calculate_percentage()`  | Calculates the percentage.             |
-| `get_grade()`             | Determines the grade.                  |
-| `get_valid_roll_number()` | Validates the roll number.             |
-
-### 📊 Grading Criteria
-
-| Percentage    | Grade |
-| ------------- | ----- |
-| 90% and above | A+    |
-| 80% – 89%     | A     |
-| 70% – 79%     | B     |
-| 60% – 69%     | C     |
-| 50% – 59%     | D     |
-| Below 50%     | Fail  |
-
-**Passing Rule:** A student must score at least 40 marks in every subject. If marks in any subject are below 40, the final result will be Fail regardless of the overall percentage.
-
-### 🖼️ Program Documentation
-
-**1. Function Structure**
-
-Shows the organization of the custom functions and how they contribute to generating a student result card.
-
-\<img src="assets/assessment-02/result-card-function-structure.svg" width="100%" alt="Student Result Card Function Structure">
-
-**2. Program Flowchart**
-
-Illustrates the execution steps, input collection, calculations, and result generation.
-
-\<img src="assets/assessment-02/result-card-flowchart.svg" width="100%" alt="Student Result Card Flowchart">
-
-**3. Result Generation Process**
-
-Explains how student information and subject marks are processed to generate the final result.
-
-\<img src="assets/assessment-02/result-generation-process.svg" width="100%" alt="Result Generation Process">
-
-**4. Grading Decision Flowchart**
-
-Shows the grading conditions and the final Pass/Fail decision based on the percentage and subject marks.
-
-\<img src="assets/assessment-02/grading-decision-flowchart.svg" width="100%" alt="Grading Decision Flowchart">
-
----
-
-# 📈 Application 02 — Class Marks Analyzer
-
-**Python File:** `class_marks_analyzer.py`
-
-This program collects the names and marks of multiple students and analyzes the overall class performance using Python lists, functions, and loops.
-
-### ✨ Main Features
-
-- Takes the total number of students.
-- Maintains separate lists for student names and marks.
-- Uses `append()` to store student information.
-- Validates marks between 0 and 100.
-- Calculates the class average.
-- Finds the highest and lowest marks.
-- Identifies students with the highest and lowest marks.
-- Counts passed and failed students.
-- Displays students scoring above the class average.
-- Sorts marks in descending order.
-
-### ⚙️ Functions Used
-
-| Function                   | Purpose                                               |
-| -------------------------- | ----------------------------------------------------- |
-| `get_student_count()`      | Gets the number of students.                          |
-| `get_valid_marks()`        | Accepts and validates student marks.                  |
-| `calculate_average()`      | Calculates the class average.                         |
-| `display_highest_lowest()` | Displays highest and lowest marks with student names. |
-| `count_pass_fail()`        | Counts passed and failed students.                    |
-
-### 📊 Passing Criteria
-
-- **50 marks or above:** Pass
-- **Below 50 marks:** Fail
-
-### 🖼️ Program Documentation
-
-**1. Function Structure**
-
-Shows the organization of the custom functions used to analyze student marks and class performance.
-
-\<img src="assets/assessment-02/class-analyzer-function-structure.svg" width="100%" alt="Class Marks Analyzer Function Structure">
-
-**2. Program Flowchart**
-
-Illustrates the program execution, student data collection, calculations, and performance analysis.
-
-\<img src="assets/assessment-02/class-analyzer-flowchart.svg" width="100%" alt="Class Marks Analyzer Flowchart">
-
-**3. Class Data Processing**
-
-Explains how student names and marks are stored and processed to calculate class statistics.
-
-\<img src="assets/assessment-02/class-data-processing.svg" width="100%" alt="Class Data Processing">
-
-**4. List Processing Workflow**
-
-Shows how Python lists are used to store, process, and sort student marks.
-
-\<img src="assets/assessment-02/list-processing-workflow\.svg" width="100%" alt="List Processing Workflow">
-
----
-
-## 🏗️ Common System Documentation
-
-The following diagrams represent the overall project structure, shared input validation approach, and testing documentation for both applications.
-
-### 1. Project Architecture
-
-\<img src="assets/assessment-02/project-architecture.svg" width="100%" alt="Project Architecture">
-
-### 2. Use Case Diagram
-
-\<img src="assets/assessment-02/use-case-diagram.svg" width="100%" alt="Use Case Diagram">
-
-### 3. Input Validation Workflow
-
-\<img src="assets/assessment-02/input-validation-workflow\.svg" width="100%" alt="Input Validation Workflow">
-
-### 4. Test Cases
-
-\<img src="assets/assessment-02/test-cases.svg" width="100%" alt="Test Cases">
-
-### 5. Testing Workflow
-
-\<img src="assets/assessment-02/testing-workflow\.svg" width="100%" alt="Testing Workflow">
-
----
+| Application | Description |
+|---|---|
+| Student Result Card Generator | Generates a student's result card by calculating total marks, percentage, and grade. |
+| Class Marks Analyzer | Analyzes marks of multiple students and displays useful class performance statistics. |
 
 ## 🛠️ Technologies & Concepts
 
-| Concept            | Usage                                       |
-| ------------------ | ------------------------------------------- |
-| Python             | Main programming language                   |
-| Functions          | Dividing programs into reusable blocks      |
-| Strings            | Handling student names and roll numbers     |
-| Lists              | Storing student names and marks             |
-| `append()`         | Adding student data to lists                |
-| `len()`            | Finding the number of list elements         |
-| `sum()`            | Calculating the total of marks              |
-| `max()`            | Finding the highest marks                   |
-| `min()`            | Finding the lowest marks                    |
-| `sorted()`         | Sorting marks in descending order           |
-| `if / elif / else` | Applying conditions and grading rules       |
-| `for` loops        | Processing multiple students and subjects   |
-| `while` loops      | Repeating input until valid data is entered |
-| `try / except`     | Handling invalid numeric input              |
-| `isdigit()`        | Checking numeric roll number input          |
-| `strip()`          | Removing unnecessary spaces                 |
-| `title()`          | Formatting student names                    |
-| F-Strings          | Displaying formatted output                 |
+- **Language:** Python
+- **Functions:** Creating and calling reusable functions
+- **Strings:** String formatting and name manipulation
+- **Lists:** Storing and processing student marks
+- **Loops:** Repeating operations and processing records
+- **Conditional Statements:** Applying grading and pass/fail conditions
+- **Input Validation:** Handling invalid user input
+- **Basic Data Analysis:** Calculating averages, highest marks, and lowest marks
 
-## 📂 Project Structure
+---
+
+# Project Documentation
+
+## 1. Student Result Card Generator
+
+### 📖 Description
+
+The Student Result Card Generator is a Python program that takes a student's information and subject marks as input. It calculates the total marks, percentage, and grade, then displays the result in a properly formatted result card.
+
+The program also applies input validation to ensure that the entered information and marks are within the expected range.
+
+### ⚙️ Main Features
+
+- Takes student name and roll number as input.
+- Accepts marks for multiple subjects.
+- Validates marks before processing.
+- Calculates total obtained marks.
+- Calculates overall percentage.
+- Assigns a grade according to the percentage.
+- Displays the final result card.
+
+### 🧮 Grading Criteria
+
+| Percentage | Grade |
+|---|---|
+| 90% and above | A+ |
+| 80% – 89% | A |
+| 70% – 79% | B |
+| 60% – 69% | C |
+| 50% – 59% | D |
+| Below 50% | Fail |
+
+**Passing Condition:** A student must obtain at least 40 marks in each subject to pass the result card assessment.
+
+### 🧩 Function Structure
+
+The program uses separate functions to perform different tasks, making the code easier to understand and maintain.
+
+**Important functions:**
+- `format_name()`
+- `get_valid_marks()`
+- `calculate_percentage()`
+- `get_grade()`
+- `get_valid_roll_number()`
+
+### 📊 Function Structure Diagram
+
+![Result Card Function Structure](assets/assessment-02/result-card-function-structure.svg)
+
+### 🔄 Result Card Flowchart
+
+![Result Card Flowchart](assets/assessment-02/result-card-flowchart.svg)
+
+### 📋 Result Generation Process
+
+![Result Generation Process](assets/assessment-02/result-generation-process.svg)
+
+### 🎯 Grading Decision Flowchart
+
+![Grading Decision Flowchart](assets/assessment-02/grading-decision-flowchart.svg)
+
+---
+
+## 2. Class Marks Analyzer
+
+### 📖 Description
+
+The Class Marks Analyzer is a Python program designed to process and analyze the marks of multiple students. It stores student marks in lists and performs calculations to provide an overview of class performance.
+
+It helps identify the highest and lowest marks, calculate the class average, and count the number of students who passed or failed.
+
+### ⚙️ Main Features
+
+- Takes marks of multiple students as input.
+- Stores marks in a Python list.
+- Validates entered marks.
+- Calculates the class average.
+- Finds the highest and lowest marks.
+- Counts passed and failed students.
+- Displays a summary of class performance.
+
+### 🧮 Pass/Fail Criteria
+
+| Marks | Status |
+|---|---|
+| 50 or above | Pass |
+| Below 50 | Fail |
+
+### 🧩 Function Structure
+
+The program uses functions to organize the input, processing, and analysis tasks. Lists are used to store and process student marks.
+
+### 📊 Function Structure Diagram
+
+![Class Analyzer Function Structure](assets/assessment-02/class-analyzer-function-structure.svg)
+
+### 🔄 Class Analyzer Flowchart
+
+![Class Analyzer Flowchart](assets/assessment-02/class-analyzer-flowchart.svg)
+
+### 📈 Class Data Processing
+
+![Class Data Processing](assets/assessment-02/class-data-processing.svg)
+
+### 📝 List Processing Workflow
+
+![List Processing Workflow](assets/assessment-02/list-processing-workflow.svg)
+
+---
+
+## 3. Common Project Documentation
+
+This section contains diagrams that explain the overall structure, user interaction, validation, and testing approach used in the project.
+
+### 🏗️ Project Architecture
+
+![Project Architecture](assets/assessment-02/project-architecture.svg)
+
+### 👥 Use Case Diagram
+
+![Use Case Diagram](assets/assessment-02/use-case-diagram.svg)
+
+### ✅ Input Validation Workflow
+
+![Input Validation Workflow](assets/assessment-02/input-validation-workflow.svg)
+
+### 🧪 Test Cases
+
+![Test Cases](assets/assessment-02/test-cases.svg)
+
+### 🔍 Testing Workflow
+
+![Testing Workflow](assets/assessment-02/testing-workflow.svg)
+
+---
+
+## 📁 Project Structure
 
 ```text
 python-functions-lists-assessment/
@@ -255,202 +213,88 @@ python-functions-lists-assessment/
 │
 ├── result_card_generator.py
 ├── class_marks_analyzer.py
-├── README.md
-└── demo.html
+├── demo.html
+└── README.md
 ```
 
-## ⚙️ Requirements
+## ▶️ How to Run the Programs
+
+### Requirements
 
 - Python 3.x
-- Visual Studio Code or any Python-supported editor
-- Windows, Linux, or macOS
+- Any code editor (VS Code recommended)
 
-No external Python libraries are required.
-
-## ▶️ How to Run
-
-**Step 1:** Clone or download this repository.
+### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/aliabbas0014/python-functions-lists-assessment.git
 ```
 
-**Step 2:** Open the project folder in Visual Studio Code or a terminal.
-
-**Step 3:** Run the Student Result Card Generator:
+### Step 2: Open the Project Folder
 
 ```bash
-py result_card_generator.py
+cd python-functions-lists-assessment
 ```
 
-**Step 4:** Run the Class Marks Analyzer:
-
-```bash
-py class_marks_analyzer.py
-```
-
-**Alternative:** If the `py` command is not available, use:
+### Step 3: Run Student Result Card Generator
 
 ```bash
 python result_card_generator.py
 ```
 
+### Step 4: Run Class Marks Analyzer
+
 ```bash
 python class_marks_analyzer.py
 ```
 
-## 📊 Sample Outputs
+## 🎓 Learning Outcomes
 
-### Student Result Card Generator
+Through this assessment, I practiced and improved my understanding of:
 
-**Sample Input:**
-
-```text
-Enter student name: ali abbas
-Enter roll number: 12345
-
-Enter English marks: 95
-Enter Mathematics marks: 90
-Enter Computer marks: 88
-Enter Physics marks: 92
-Enter Chemistry marks: 85
-```
-
-**Sample Result:**
-
-```text
-====================================
-        STUDENT RESULT CARD
-====================================
-
-Student Name: Ali Abbas
-Roll Number: 12345
-
-English:       95
-Mathematics:   90
-Computer:      88
-Physics:       92
-Chemistry:     85
-
-------------------------------------
-Total Marks:   450 / 500
-Percentage:    90.00%
-Grade:         A+
-Final Result:  Pass
-====================================
-```
-
-### Class Marks Analyzer
-
-**Sample Input:**
-
-| Student Name | Marks |
-| ------------ | ----: |
-| Ali          |    85 |
-| Ahmed        |    45 |
-| Sara         |    95 |
-| Usman        |    60 |
-| Ayesha       |    75 |
-
-**Sample Result:**
-
-```text
-Total Students: 5
-
-Class Average: 72.0
-
-Student(s) with Highest Marks:
-Sara - 95
-
-Student(s) with Lowest Marks:
-Ahmed - 45
-
-Passed Students: 4
-Failed Students: 1
-
-Students Above Average:
-Ali - 85
-Sara - 95
-Ayesha - 75
-
-Marks in Descending Order:
-[95, 85, 75, 60, 45]
-```
-
-*Note: These are sample inputs and outputs for demonstration.*
-
----
+- Creating reusable functions in Python.
+- Working with strings and formatting text.
+- Using lists to store and manage data.
+- Applying loops and conditional statements.
+- Validating user input.
+- Performing calculations using functions.
+- Analyzing student marks and displaying results.
+- Organizing programs into smaller and manageable parts.
 
 ## 🌐 Live Demo
 
-Explore the visual preview of both Python applications:
+You can explore the project documentation and interactive demo through the link below.
 
-\<div align="center">
+<div align="center">
 
-\<a href="[https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html](https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html)">
-\<img src="assets/svg-buttons/live-demo.svg" alt="Open Live Demo">
-\</a>
+<a href="https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html">
+  <img src="assets/svg-buttons/live-demo.svg" alt="Explore Live Demo">
+</a>
 
-\</div>
-
-The demo includes:
-
-- Student result card preview.
-- Class performance dashboard.
-- Marks and percentage overview.
-- Highest and lowest marks.
-- Pass/fail statistics.
-
-**Note:** The HTML demo is a static visual preview and is not directly connected to the Python programs.
+</div>
 
 ---
 
-## 🎯 Learning Outcomes
+## 👨‍💻 Developer
 
-Through this assessment, I practiced:
+<div align="center">
 
-- Creating and calling custom functions.
-- Working with strings and string methods.
-- Creating and managing Python lists.
-- Using loops to process multiple records.
-- Applying conditional statements.
-- Validating user input.
-- Performing calculations using functions.
-- Organizing code into readable and reusable sections.
+### Ali Abbas
+
+**Software Engineering Graduate | Python Bootcamp Student | Web Developer**
+
+Building practical projects while learning and exploring modern technologies.
+
+[GitHub](https://github.com/aliabbas0014) · [LinkedIn](https://www.linkedin.com/in/the-aliabbas/) · [Portfolio](https://aliabbas0014.github.io/Portfolio/)
+
+</div>
 
 ---
 
-## 👨‍💻 About the Developer
+<div align="center">
 
-\<div align="center">
+**Python Bootcamp — Assessment 02**
 
-# Ali Abbas
+*Learning by building. Improving through practice.*
 
-**Software Engineering Graduate**
-
-*Python Bootcamp Student · Web Developer*
-
-\<br>
-
-\<a href="[https://github.com/aliabbas0014](https://github.com/aliabbas0014)">
-\<img src="[https://img.shields.io/badge/GitHub-aliabbas0014-293747?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/GitHub-aliabbas0014-293747?style=for-the-badge\&logo=github\&logoColor=white)" alt="GitHub Profile">
-\</a>
-
-\<a href="[https://aliabbas0014.github.io/Portfolio](https://aliabbas0014.github.io/Portfolio)">
-\<img src="[https://img.shields.io/badge/Portfolio-Visit_Website-245B8F?style=for-the-badge&logo=googlechrome&logoColor=white](https://img.shields.io/badge/Portfolio-Visit_Website-245B8F?style=for-the-badge\&logo=googlechrome\&logoColor=white)" alt="Portfolio">
-\</a>
-
-\<br>\<br>
-
-\<sub>Building practical projects, improving programming skills, and learning through hands-on experience.\</sub>
-
-\<br>\<br>
-
-\<img src="[https://img.shields.io/badge/ASSESSMENT-02-245B8F?style=flat-square](https://img.shields.io/badge/ASSESSMENT-02-245B8F?style=flat-square)">
-\<img src="[https://img.shields.io/badge/BUILT_WITH-PYTHON-D58B52?style=flat-square](https://img.shields.io/badge/BUILT_WITH-PYTHON-D58B52?style=flat-square)">
-
-\<br>\<br>
-
-**Learning • Practicing • Improving**
-
-\</div>
+</div>
