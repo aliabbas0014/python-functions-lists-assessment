@@ -1,12 +1,19 @@
  <div align="center">
 
-# Python Functions & Lists — Assessment 02
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,50:7C3AED,100:06B6D4&height=220&section=header&text=Python%20Functions%20%26%20Lists&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=Bootcamp%20Assessment%2002&descAlignY=58&descSize=18" width="100%" alt="Python Functions and Lists Banner">
 
-### Python Bootcamp | Assessment 02
+### Python Bootcamp — Assessment 02
 
-**A practical Python project demonstrating Functions, Strings, Lists, Input Validation, and Data Analysis.**
+**Two practical Python applications demonstrating Functions, Strings, Lists, Input Validation, and Data Analysis.**
 
 <br>
+
+<img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+<img src="https://img.shields.io/badge/HTML5-Documentation-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+<img src="https://img.shields.io/badge/GitHub-Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white" alt="GitHub Pages">
+<img src="https://img.shields.io/badge/Assessment-02-8B5CF6?style=for-the-badge" alt="Assessment 02">
+
+<br><br>
 
 <a href="https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html">
   <img src="assets/svg-buttons/live-demo.svg" alt="View Live Demo">
@@ -17,8 +24,6 @@
 <a href="#project-documentation">
   <img src="assets/svg-buttons/explore-project.svg" alt="Explore Project">
 </a>
-
-<br>
 
 </div>
 
@@ -40,6 +45,8 @@ The main purpose of this assessment is to practice Python functions, string mani
 ## 🛠️ Technologies & Concepts
 
 - **Language:** Python
+- **Documentation & Demo:** HTML5
+- **Hosting:** GitHub Pages
 - **Functions:** Creating and calling reusable functions
 - **Strings:** String formatting and name manipulation
 - **Lists:** Storing and processing student marks
@@ -279,19 +286,42 @@ You can explore the project documentation and interactive demo through the link 
 
 <div align="center">
 
+<img src="https://img.shields.io/badge/ALI-ABBAS-2563EB?style=for-the-badge&labelColor=111827" alt="Ali Abbas">
+
 ### Ali Abbas
 
 **Software Engineering Graduate | Python Bootcamp Student | Web Developer**
 
 Building practical projects while learning and exploring modern technologies.
 
-[GitHub](https://github.com/aliabbas0014) · [LinkedIn](https://www.linkedin.com/in/the-aliabbas/) · [Portfolio](https://aliabbas0014.github.io/Portfolio/)
+<br>
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
+<img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" alt="GitHub Pages">
+
+<br><br>
+
+<a href="https://github.com/aliabbas0014">
+  <img src="https://img.shields.io/badge/GitHub-View%20Profile-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile">
+</a>
+<a href="https://www.linkedin.com/in/the-aliabbas/">
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
+<a href="https://aliabbas0014.github.io/Portfolio/">
+  <img src="https://img.shields.io/badge/Portfolio-Visit-7C3AED?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio">
+</a>
+
+<br><br>
 
 </div>
 
 ---
 
 <div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,50:7C3AED,100:06B6D4&height=100&section=footer" width="100%" alt="Footer Banner">
 
 **Python Bootcamp — Assessment 02**
 
