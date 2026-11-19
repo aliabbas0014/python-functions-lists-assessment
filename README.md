@@ -1,11 +1,13 @@
-<div align="center">
+ <div align="center">
 
 <a href="https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html">
 <img src="https://img.shields.io/badge/STUDENT_PERFORMANCE_MANAGEMENT_SYSTEM-245B8F?style=for-the-badge&labelColor=293747" width="100%" alt="Student Performance Management System">
 </a>
-🎓 Student Performance Management System
+
+# 🎓 Student Performance Management System
 
 ### Python Bootcamp — Assessment 02
+
 **Functions · Strings · Lists**
 
 A Python-based student result card generator and class marks analyzer.
@@ -13,10 +15,13 @@ A Python-based student result card generator and class marks analyzer.
 <br>
 
 <a href="https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html">
-  <img src="https://img.shields.io/badge/🚀_LIVE_DEMO-View_Website-245B8F?style=for-the-badge" alt="Live Demo">
+<img src="assets/svg-buttons/live-demo.svg" alt="View Live Demo">
 </a>
 <a href="https://github.com/aliabbas0014/python-functions-lists-assessment">
-  <img src="https://img.shields.io/badge/GitHub-View_Repository-293747?style=for-the-badge&logo=github" alt="GitHub Repository">
+<img src="assets/svg-buttons/source-code.svg" alt="View Source Code">
+</a>
+<a href="#project-overview">
+<img src="assets/svg-buttons/explore-project.svg" alt="Explore Project">
 </a>
 
 <br><br>
@@ -32,6 +37,8 @@ A Python-based student result card generator and class marks analyzer.
 </div>
 
 ---
+
+<a id="project-overview"></a>
 
 ## 📌 Project Overview
 
@@ -115,6 +122,100 @@ This program collects marks of multiple students and analyzes the overall class 
 
 ---
 
+## 🏗️ System Design & Documentation
+
+The following diagrams illustrate the structure, logic, workflows, and testing approach of both Python applications.
+
+### Project Architecture
+
+<img src="assets/assessment-02/project-architecture.svg" width="100%" alt="Project Architecture">
+
+### Function Structures
+
+These diagrams show how the custom functions are organized and how different parts of each program work together.
+
+<details>
+<summary><b>Student Result Card Generator — Function Structure</b></summary>
+<br>
+<img src="assets/assessment-02/result-card-function-structure.svg" width="100%" alt="Result Card Function Structure">
+</details>
+
+<details>
+<summary><b>Class Marks Analyzer — Function Structure</b></summary>
+<br>
+<img src="assets/assessment-02/class-analyzer-function-structure.svg" width="100%" alt="Class Analyzer Function Structure">
+</details>
+
+### Use Case Diagram
+
+<img src="assets/assessment-02/use-case-diagram.svg" width="100%" alt="Use Case Diagram">
+
+### Program Flowcharts
+
+The flowcharts explain the main execution steps and decision-making processes in both applications.
+
+<details>
+<summary><b>Student Result Card Generator — Flowchart</b></summary>
+<br>
+<img src="assets/assessment-02/result-card-flowchart.svg" width="100%" alt="Result Card Flowchart">
+</details>
+
+<details>
+<summary><b>Class Marks Analyzer — Flowchart</b></summary>
+<br>
+<img src="assets/assessment-02/class-analyzer-flowchart.svg" width="100%" alt="Class Analyzer Flowchart">
+</details>
+
+### Process Workflows
+
+<details>
+<summary><b>Result Generation Process</b></summary>
+<br>
+<img src="assets/assessment-02/result-generation-process.svg" width="100%" alt="Result Generation Process">
+</details>
+
+<details>
+<summary><b>Class Data Processing</b></summary>
+<br>
+<img src="assets/assessment-02/class-data-processing.svg" width="100%" alt="Class Data Processing">
+</details>
+
+<details>
+<summary><b>Grading Decision Flowchart</b></summary>
+<br>
+<img src="assets/assessment-02/grading-decision-flowchart.svg" width="100%" alt="Grading Decision Flowchart">
+</details>
+
+<details>
+<summary><b>Input Validation Workflow</b></summary>
+<br>
+<img src="assets/assessment-02/input-validation-workflow.svg" width="100%" alt="Input Validation Workflow">
+</details>
+
+<details>
+<summary><b>List Processing Workflow</b></summary>
+<br>
+<img src="assets/assessment-02/list-processing-workflow.svg" width="100%" alt="List Processing Workflow">
+</details>
+
+### Testing Documentation
+
+These diagrams provide an overview of test scenarios and the testing process used to check program functionality.
+
+<details>
+<summary><b>Test Cases</b></summary>
+<br>
+<img src="assets/assessment-02/test-cases.svg" width="100%" alt="Test Cases">
+</details>
+
+<details>
+<summary><b>Testing Workflow</b></summary>
+<br>
+<img src="assets/assessment-02/testing-workflow.svg" width="100%" alt="Testing Workflow">
+</details>
+
+---
+
 ## 🛠️ Technologies & Concepts
 
 | Concept | Usage |
@@ -140,7 +241,25 @@ This program collects marks of multiple students and analyzes the overall class 
 python-functions-lists-assessment/
 │
 ├── assets/
-│   └── banner.png
+│   ├── assessment-02/
+│   │   ├── project-architecture.svg
+│   │   ├── result-card-function-structure.svg
+│   │   ├── class-analyzer-function-structure.svg
+│   │   ├── use-case-diagram.svg
+│   │   ├── result-card-flowchart.svg
+│   │   ├── class-analyzer-flowchart.svg
+│   │   ├── result-generation-process.svg
+│   │   ├── class-data-processing.svg
+│   │   ├── grading-decision-flowchart.svg
+│   │   ├── input-validation-workflow.svg
+│   │   ├── list-processing-workflow.svg
+│   │   ├── test-cases.svg
+│   │   └── testing-workflow.svg
+│   │
+│   └── svg-buttons/
+│       ├── live-demo.svg
+│       ├── source-code.svg
+│       └── explore-project.svg
 │
 ├── result_card_generator.py
 ├── class_marks_analyzer.py
@@ -209,7 +328,7 @@ Enter Chemistry marks: 85
 
 ```text
 ====================================
-         STUDENT RESULT CARD
+        STUDENT RESULT CARD
 ====================================
 
 Student Name: Ali Abbas
@@ -275,7 +394,7 @@ Explore the visual preview of both Python applications:
 <div align="center">
 
 <a href="https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html">
-  <img src="https://img.shields.io/badge/OPEN_LIVE_WEBSITE-245B8F?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Open Live Website">
+<img src="assets/svg-buttons/live-demo.svg" alt="Open Live Demo">
 </a>
 
 </div>
