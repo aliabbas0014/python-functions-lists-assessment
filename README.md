@@ -5,10 +5,6 @@
 <img src="./assets/assessment-02/header-banner.svg" width="100%" alt="Python Functions and Lists">
 </div>
 
-### Python Bootcamp — Assessment 02
-
-**Two practical Python applications demonstrating Functions, Strings, Lists, Input Validation, and Data Analysis.**
-
 <br>
 
 <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
@@ -327,9 +323,5 @@ Building practical projects while learning and exploring modern technologies.
 <img src="assets/assessment-02/footer-banner.svg"
      width="100%"
      alt="Python Bootcamp Assessment 02 Footer">
-
-**Python Bootcamp — Assessment 02**
-
-*Learning by building. Improving through practice.*
 
 </div>
