@@ -1,6 +1,6 @@
  <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,50:7C3AED,100:06B6D4&height=220&section=header&text=Python%20Functions%20%26%20Lists&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=Bootcamp%20Assessment%2002&descAlignY=58&descSize=18" width="100%" alt="Python Functions and Lists Banner">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,50:7C3AED,100:06B6D4&height=220&section=footer&text=Python%20Functions%20%26%20Lists&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=Bootcamp%20Assessment%2002&descAlignY=58&descSize=18" width="100%" alt="Python Functions and Lists Banner">
 
 ### Python Bootcamp — Assessment 02
 
