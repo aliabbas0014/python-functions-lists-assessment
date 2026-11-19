@@ -324,7 +324,9 @@ Building practical projects while learning and exploring modern technologies.
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,50:7C3AED,100:06B6D4&height=100&section=footer" width="100%" alt="Footer Banner">
+<img src="assets/assessment-02/footer-banner.svg"
+     width="100%"
+     alt="Python Bootcamp Assessment 02 Footer">
 
 **Python Bootcamp — Assessment 02**
 
