@@ -1,6 +1,8 @@
-\<div align="center">
+&#x20;\<div align="center">
 
-\<a href="[https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html](https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html)"> \<img src="[https://img.shields.io/badge/STUDENT_PERFORMANCE_MANAGEMENT_SYSTEM-245B8F?style=for-the-badge&labelColor=293747](https://img.shields.io/badge/STUDENT_PERFORMANCE_MANAGEMENT_SYSTEM-245B8F?style=for-the-badge\&labelColor=293747)" width="100%" alt="Student Performance Management System"> \</a>
+\<a href="[https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html](https://aliabbas0014.github.io/python-functions-lists-assessment/demo.html)">
+\<img src="[https://img.shields.io/badge/STUDENT_PERFORMANCE_MANAGEMENT_SYSTEM-245B8F?style=for-the-badge&labelColor=293747](https://img.shields.io/badge/STUDENT_PERFORMANCE_MANAGEMENT_SYSTEM-245B8F?style=for-the-badge\&labelColor=293747)" width="100%" alt="Student Performance Management System">
+\</a>
 
 # 🎓 Student Performance Management System
 
@@ -18,9 +20,7 @@ A Python-based student result card generator and class marks analyzer.
 
 \<br>\<br>
 
-\<img src="[https://img.shields.io/badge/Python-3.x-245B8F?style=flat-square&logo=python&logoColor=white](https://img.shields.io/badge/Python-3.x-245B8F?style=flat-square\&logo=python\&logoColor=white)">
-\<img src="[https://img.shields.io/badge/Assessment-02-D58B52?style=flat-square](https://img.shields.io/badge/Assessment-02-D58B52?style=flat-square)">
-\<img src="[https://img.shields.io/badge/Concepts-Functions%20%7C%20Strings%20%7C%20Lists-293747?style=flat-square](https://img.shields.io/badge/Concepts-Functions%20%7C%20Strings%20%7C%20Lists-293747?style=flat-square)">
+\<img src="[https://img.shields.io/badge/Python-3.x-245B8F?style=flat-square&logo=python&logoColor=white](https://img.shields.io/badge/Python-3.x-245B8F?style=flat-square\&logo=python\&logoColor=white)"> \<img src="[https://img.shields.io/badge/Assessment-02-D58B52?style=flat-square](https://img.shields.io/badge/Assessment-02-D58B52?style=flat-square)"> \<img src="[https://img.shields.io/badge/Concepts-Functions%20%7C%20Strings%20%7C%20Lists-293747?style=flat-square](https://img.shields.io/badge/Concepts-Functions%20%7C%20Strings%20%7C%20Lists-293747?style=flat-square)">
 
 \<br>\<br>
 
@@ -34,32 +34,38 @@ A Python-based student result card generator and class marks analyzer.
 
 ## 📌 Project Overview
 
-This project is developed as part of **Python Bootcamp Assessment 02**, focusing on the practical use of functions, strings, lists, loops, and conditional statements.
+This project is developed as part of **Python Bootcamp Assessment 02**, focusing on the practical implementation of Python functions, strings, lists, loops, and conditional statements.
 
-It contains two separate Python applications designed to manage student marks, generate result cards, and analyze class performance.
+The project contains two independent Python applications:
+
+1. **Student Result Card Generator** — collects student information and subject marks to calculate and display an individual result.
+2. **Class Marks Analyzer** — collects multiple students' marks and analyzes overall class performance.
 
 A separate HTML demo page is also included to provide a visual preview of both applications.
 
-## 🚀 Applications
+---
 
-### 1. Student Result Card Generator
+# 🚀 Application 01 — Student Result Card Generator
 
-**File:** `result_card_generator.py`
+\<text align="center"> \</text>
 
-This program collects a student's personal information and marks in five subjects, then generates a formatted result card.
+**Python File:** `result_card_generator.py`
 
-**Main Features:**
+This program collects a student's name, roll number, and marks in five subjects. It then calculates the total marks and percentage, determines the grade, and generates a formatted result card.
 
-- Takes student name and roll number.
+### ✨ Main Features
+
+- Takes the student's name and roll number.
 - Accepts marks in five subjects.
 - Validates marks between 0 and 100.
 - Checks that the roll number contains digits only.
+- Formats the student's name using string methods.
 - Calculates total marks and percentage.
-- Assigns grades according to percentage.
+- Assigns a grade based on the percentage.
 - Checks individual subject marks for passing criteria.
 - Displays a complete student result card.
 
-**Functions Used:**
+### ⚙️ Functions Used
 
 | Function                  | Purpose                                |
 | ------------------------- | -------------------------------------- |
@@ -69,7 +75,7 @@ This program collects a student's personal information and marks in five subject
 | `get_grade()`             | Determines the grade.                  |
 | `get_valid_roll_number()` | Validates the roll number.             |
 
-**Grading Criteria:**
+### 📊 Grading Criteria
 
 | Percentage    | Grade |
 | ------------- | ----- |
@@ -82,25 +88,54 @@ This program collects a student's personal information and marks in five subject
 
 **Passing Rule:** A student must score at least 40 marks in every subject. If marks in any subject are below 40, the final result will be Fail regardless of the overall percentage.
 
-### 2. Class Marks Analyzer
+### 🖼️ Program Documentation
 
-**File:** `class_marks_analyzer.py`
+**1. Function Structure**
 
-This program collects marks of multiple students and analyzes the overall class performance.
+Shows the organization of the custom functions and how they contribute to generating a student result card.
 
-**Main Features:**
+\<img src="assets/assessment-02/result-card-function-structure.svg" width="100%" alt="Student Result Card Function Structure">
+
+**2. Program Flowchart**
+
+Illustrates the execution steps, input collection, calculations, and result generation.
+
+\<img src="assets/assessment-02/result-card-flowchart.svg" width="100%" alt="Student Result Card Flowchart">
+
+**3. Result Generation Process**
+
+Explains how student information and subject marks are processed to generate the final result.
+
+\<img src="assets/assessment-02/result-generation-process.svg" width="100%" alt="Result Generation Process">
+
+**4. Grading Decision Flowchart**
+
+Shows the grading conditions and the final Pass/Fail decision based on the percentage and subject marks.
+
+\<img src="assets/assessment-02/grading-decision-flowchart.svg" width="100%" alt="Grading Decision Flowchart">
+
+---
+
+# 📈 Application 02 — Class Marks Analyzer
+
+**Python File:** `class_marks_analyzer.py`
+
+This program collects the names and marks of multiple students and analyzes the overall class performance using Python lists, functions, and loops.
+
+### ✨ Main Features
 
 - Takes the total number of students.
-- Stores student names and marks in separate lists.
+- Maintains separate lists for student names and marks.
+- Uses `append()` to store student information.
 - Validates marks between 0 and 100.
-- Calculates class average.
-- Finds highest and lowest marks.
-- Identifies students with highest and lowest marks.
+- Calculates the class average.
+- Finds the highest and lowest marks.
+- Identifies students with the highest and lowest marks.
 - Counts passed and failed students.
 - Displays students scoring above the class average.
 - Sorts marks in descending order.
 
-**Functions Used:**
+### ⚙️ Functions Used
 
 | Function                   | Purpose                                               |
 | -------------------------- | ----------------------------------------------------- |
@@ -110,66 +145,60 @@ This program collects marks of multiple students and analyzes the overall class 
 | `display_highest_lowest()` | Displays highest and lowest marks with student names. |
 | `count_pass_fail()`        | Counts passed and failed students.                    |
 
-**Passing Criteria:**
+### 📊 Passing Criteria
 
-- 50 marks or above: Pass
-- Below 50 marks: Fail
+- **50 marks or above:** Pass
+- **Below 50 marks:** Fail
+
+### 🖼️ Program Documentation
+
+**1. Function Structure**
+
+Shows the organization of the custom functions used to analyze student marks and class performance.
+
+\<img src="assets/assessment-02/class-analyzer-function-structure.svg" width="100%" alt="Class Marks Analyzer Function Structure">
+
+**2. Program Flowchart**
+
+Illustrates the program execution, student data collection, calculations, and performance analysis.
+
+\<img src="assets/assessment-02/class-analyzer-flowchart.svg" width="100%" alt="Class Marks Analyzer Flowchart">
+
+**3. Class Data Processing**
+
+Explains how student names and marks are stored and processed to calculate class statistics.
+
+\<img src="assets/assessment-02/class-data-processing.svg" width="100%" alt="Class Data Processing">
+
+**4. List Processing Workflow**
+
+Shows how Python lists are used to store, process, and sort student marks.
+
+\<img src="assets/assessment-02/list-processing-workflow\.svg" width="100%" alt="List Processing Workflow">
 
 ---
 
-## 🏗️ System Design & Documentation
+## 🏗️ Common System Documentation
 
-The following diagrams illustrate the architecture, program logic, workflows, and testing approach of both Python applications.
+The following diagrams represent the overall project structure, shared input validation approach, and testing documentation for both applications.
 
 ### 1. Project Architecture
 
 \<img src="assets/assessment-02/project-architecture.svg" width="100%" alt="Project Architecture">
 
-### 2. Student Result Card Generator — Function Structure
-
-\<img src="assets/assessment-02/result-card-function-structure.svg" width="100%" alt="Result Card Function Structure">
-
-### 3. Class Marks Analyzer — Function Structure
-
-\<img src="assets/assessment-02/class-analyzer-function-structure.svg" width="100%" alt="Class Analyzer Function Structure">
-
-### 4. Use Case Diagram
+### 2. Use Case Diagram
 
 \<img src="assets/assessment-02/use-case-diagram.svg" width="100%" alt="Use Case Diagram">
 
-### 5. Student Result Card Generator — Flowchart
-
-\<img src="assets/assessment-02/result-card-flowchart.svg" width="100%" alt="Result Card Flowchart">
-
-### 6. Class Marks Analyzer — Flowchart
-
-\<img src="assets/assessment-02/class-analyzer-flowchart.svg" width="100%" alt="Class Analyzer Flowchart">
-
-### 7. Result Generation Process
-
-\<img src="assets/assessment-02/result-generation-process.svg" width="100%" alt="Result Generation Process">
-
-### 8. Class Data Processing
-
-\<img src="assets/assessment-02/class-data-processing.svg" width="100%" alt="Class Data Processing">
-
-### 9. Grading Decision Flowchart
-
-\<img src="assets/assessment-02/grading-decision-flowchart.svg" width="100%" alt="Grading Decision Flowchart">
-
-### 10. Input Validation Workflow
+### 3. Input Validation Workflow
 
 \<img src="assets/assessment-02/input-validation-workflow\.svg" width="100%" alt="Input Validation Workflow">
 
-### 11. List Processing Workflow
-
-\<img src="assets/assessment-02/list-processing-workflow\.svg" width="100%" alt="List Processing Workflow">
-
-### 12. Test Cases
+### 4. Test Cases
 
 \<img src="assets/assessment-02/test-cases.svg" width="100%" alt="Test Cases">
 
-### 13. Testing Workflow
+### 5. Testing Workflow
 
 \<img src="assets/assessment-02/testing-workflow\.svg" width="100%" alt="Testing Workflow">
 
@@ -184,6 +213,11 @@ The following diagrams illustrate the architecture, program logic, workflows, an
 | Strings            | Handling student names and roll numbers     |
 | Lists              | Storing student names and marks             |
 | `append()`         | Adding student data to lists                |
+| `len()`            | Finding the number of list elements         |
+| `sum()`            | Calculating the total of marks              |
+| `max()`            | Finding the highest marks                   |
+| `min()`            | Finding the lowest marks                    |
+| `sorted()`         | Sorting marks in descending order           |
 | `if / elif / else` | Applying conditions and grading rules       |
 | `for` loops        | Processing multiple students and subjects   |
 | `while` loops      | Repeating input until valid data is entered |
@@ -191,7 +225,6 @@ The following diagrams illustrate the architecture, program logic, workflows, an
 | `isdigit()`        | Checking numeric roll number input          |
 | `strip()`          | Removing unnecessary spaces                 |
 | `title()`          | Formatting student names                    |
-| `sorted()`         | Sorting marks in descending order           |
 | F-Strings          | Displaying formatted output                 |
 
 ## 📂 Project Structure
@@ -256,7 +289,7 @@ py result_card_generator.py
 py class_marks_analyzer.py
 ```
 
-**Alternative:** If the `py` command is not available, try:
+**Alternative:** If the `py` command is not available, use:
 
 ```bash
 python result_card_generator.py
@@ -346,6 +379,8 @@ Marks in Descending Order:
 
 *Note: These are sample inputs and outputs for demonstration.*
 
+---
+
 ## 🌐 Live Demo
 
 Explore the visual preview of both Python applications:
@@ -367,6 +402,8 @@ The demo includes:
 - Pass/fail statistics.
 
 **Note:** The HTML demo is a static visual preview and is not directly connected to the Python programs.
+
+---
 
 ## 🎯 Learning Outcomes
 
