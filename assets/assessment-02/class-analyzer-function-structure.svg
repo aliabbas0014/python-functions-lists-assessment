@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 580" width="1160" height="580" role="img" aria-label="Class Marks Analyzer Function Structure Diagram">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#183f65"/>
+      <stop offset="72%" stop-color="#245b8f"/>
+      <stop offset="100%" stop-color="#397aa9"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#245b8f"/>
+    </marker>
+    <style>
+      .t { font-family: Georgia, serif; font-size: 22px; font-weight: bold; fill: #ffffff; }
+      .s { font-family: Inter, Arial, sans-serif; font-size: 13px; fill: #e3edf5; }
+      .fn { font-family: Consolas, monospace; font-size: 13px; font-weight: bold; fill: #ffffff; }
+      .d { font-family: Inter, Arial, sans-serif; font-size: 12px; fill: #293747; }
+      .m { font-family: Inter, Arial, sans-serif; font-size: 11px; fill: #718092; }
+    </style>
+  </defs>
+
+  <rect width="1160" height="580" rx="20" fill="#f3f0e8"/>
+  <rect x="24" y="20" width="1112" height="76" rx="14" fill="url(#heroGrad)"/>
+  <text x="44" y="53" class="t">Function Structure — class_marks_analyzer.py</text>
+  <text x="44" y="76" class="s">Top-level script coordinating 5 custom functions and parallel lists student_names and student_marks</text>
+
+  <rect x="360" y="122" width="440" height="106" rx="14" fill="#fffefa" stroke="#245b8f" stroke-width="2"/>
+  <text x="580" y="148" text-anchor="middle" font-family="Consolas, monospace" font-size="15" font-weight="bold" fill="#183f65">__main__ (Class Analysis Pipeline)</text>
+  <text x="580" y="172" text-anchor="middle" class="d">Initializes student_names &amp; student_marks, collects entries,</text>
+  <text x="580" y="191" text-anchor="middle" class="d">computes average/pass-fail/high-low, above-avg &amp; sorted list</text>
+  <text x="580" y="212" text-anchor="middle" class="m">Built-ins used: sum(), len(), max(), min(), sorted()</text>
+
+  <rect x="32" y="296" width="204" height="240" rx="12" fill="#fffefa" stroke="#d9d2c5" stroke-width="1.5"/>
+  <rect x="32" y="296" width="204" height="36" rx="12" fill="#245b8f"/>
+  <text x="134" y="319" text-anchor="middle" class="fn">get_student_count()</text>
+  <text x="46" y="354" class="d"><tspan font-weight="700">Input:</tspan> none (reads stdin)</text>
+  <text x="46" y="376" class="d"><tspan font-weight="700">Logic:</tspan> int + try/except;</text>
+  <text x="58" y="394" class="d">requires count &gt; 0</text>
+  <text x="46" y="416" class="d"><tspan font-weight="700">Returns:</tspan> positive int</text>
+  <line x1="420" y1="228" x2="134" y2="296" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <rect x="254" y="296" width="214" height="240" rx="12" fill="#fffefa" stroke="#d9d2c5" stroke-width="1.5"/>
+  <rect x="254" y="296" width="214" height="36" rx="12" fill="#245b8f"/>
+  <text x="361" y="319" text-anchor="middle" class="fn">get_valid_marks(name)</text>
+  <text x="268" y="354" class="d"><tspan font-weight="700">Input:</tspan> student_name</text>
+  <text x="268" y="376" class="d"><tspan font-weight="700">Logic:</tspan> int + try/except;</text>
+  <text x="280" y="394" class="d">range 0 &lt;= marks &lt;= 100</text>
+  <text x="268" y="416" class="d"><tspan font-weight="700">Returns:</tspan> valid int marks</text>
+  <line x1="490" y1="228" x2="361" y2="296" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <rect x="486" y="296" width="210" height="240" rx="12" fill="#fffefa" stroke="#d9d2c5" stroke-width="1.5"/>
+  <rect x="486" y="296" width="210" height="36" rx="12" fill="#245b8f"/>
+  <text x="591" y="319" text-anchor="middle" class="fn">calculate_average(marks)</text>
+  <text x="500" y="354" class="d"><tspan font-weight="700">Input:</tspan> student_marks list</text>
+  <text x="500" y="376" class="d"><tspan font-weight="700">Logic:</tspan> sum(student_marks)</text>
+  <text x="512" y="394" class="d">/ len(student_marks)</text>
+  <text x="500" y="416" class="d"><tspan font-weight="700">Returns:</tspan> average float</text>
+  <line x1="580" y1="228" x2="591" y2="296" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <rect x="714" y="296" width="206" height="240" rx="12" fill="#fffefa" stroke="#d9d2c5" stroke-width="1.5"/>
+  <rect x="714" y="296" width="206" height="36" rx="12" fill="#245b8f"/>
+  <text x="817" y="319" text-anchor="middle" class="fn" font-size="11.5">display_highest_lowest(...)</text>
+  <text x="728" y="354" class="d"><tspan font-weight="700">Input:</tspan> names, marks lists</text>
+  <text x="728" y="376" class="d"><tspan font-weight="700">Logic:</tspan> max() &amp; min(); loops</text>
+  <text x="740" y="394" class="d">indices to print top/low</text>
+  <text x="728" y="416" class="d"><tspan font-weight="700">Returns:</tspan> None (prints)</text>
+  <line x1="670" y1="228" x2="817" y2="296" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <rect x="938" y="296" width="190" height="240" rx="12" fill="#fffefa" stroke="#d9d2c5" stroke-width="1.5"/>
+  <rect x="938" y="296" width="190" height="36" rx="12" fill="#245b8f"/>
+  <text x="1033" y="319" text-anchor="middle" class="fn" font-size="12">count_pass_fail(marks)</text>
+  <text x="952" y="354" class="d"><tspan font-weight="700">Input:</tspan> student_marks list</text>
+  <text x="952" y="376" class="d"><tspan font-weight="700">Logic:</tspan> marks &gt;= 50 pass</text>
+  <text x="964" y="394" class="d">else fail counter</text>
+  <text x="952" y="416" class="d"><tspan font-weight="700">Returns:</tspan> (pass, fail) tuple</text>
+  <line x1="740" y1="228" x2="1033" y2="296" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+</svg>

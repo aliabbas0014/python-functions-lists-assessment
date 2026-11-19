@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 52" width="240" height="52" role="img" aria-label="View Source Code" data-href="https://github.com/aliabbas0014/python-functions-lists-assessment">
+  <defs>
+    <linearGradient id="ctaBlueSrc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#183f65"/>
+      <stop offset="72%" stop-color="#245b8f"/>
+      <stop offset="100%" stop-color="#397aa9"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="238" height="50" rx="12" fill="#fffefa" stroke="#245b8f" stroke-width="1.8"/>
+  <rect x="12" y="11" width="30" height="30" rx="8" fill="url(#ctaBlueSrc)"/>
+  <polyline points="22,22 18,26 22,30" fill="none" stroke="#fffefa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="32,22 36,26 32,30" fill="none" stroke="#fffefa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="54" y="31" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#183f65">View Source Code</text>
+</svg>

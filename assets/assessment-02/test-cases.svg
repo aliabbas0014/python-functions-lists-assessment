@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 600" width="1160" height="600" role="img" aria-label="Test Cases Documentation Covering Both Programs">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#183f65"/>
+      <stop offset="72%" stop-color="#245b8f"/>
+      <stop offset="100%" stop-color="#397aa9"/>
+    </linearGradient>
+    <style>
+      .t { font-family: Georgia, serif; font-size: 22px; font-weight: bold; fill: #ffffff; }
+      .s { font-family: Inter, Arial, sans-serif; font-size: 13px; fill: #e3edf5; }
+      .th { font-family: Inter, Arial, sans-serif; font-size: 12px; font-weight: 800; fill: #ffffff; }
+      .td { font-family: Inter, Arial, sans-serif; font-size: 12px; fill: #293747; }
+      .cd { font-family: Consolas, monospace; font-size: 11.5px; fill: #183f65; }
+    </style>
+  </defs>
+
+  <rect width="1160" height="600" rx="20" fill="#f3f0e8"/>
+  <rect x="24" y="20" width="1112" height="72" rx="14" fill="url(#heroGrad)"/>
+  <text x="44" y="51" class="t">Test Cases Documentation — Assessment 02</text>
+  <text x="44" y="73" class="s">Functional, boundary, validation, and rule verification scenarios for both scripts</text>
+
+  <rect x="32" y="110" width="1096" height="36" rx="8" fill="#183f65"/>
+  <text x="46" y="133" class="th">ID</text>
+  <text x="105" y="133" class="th">Program</text>
+  <text x="315" y="133" class="th">Scenario / Input</text>
+  <text x="720" y="133" class="th">Expected Behavior &amp; Output</text>
+
+  <rect x="32" y="150" width="1096" height="52" fill="#fffefa" stroke="#e6e1d7"/>
+  <text x="46" y="180" class="cd">TC-01</text>
+  <text x="105" y="180" class="td">result_card_generator.py</text>
+  <text x="315" y="174" class="td">Name <tspan class="cd">"  ali abbas "</tspan>, Roll <tspan class="cd">"12345"</tspan>, marks 95, 90, 88, 92, 85</text>
+  <text x="315" y="192" class="td">All subjects &gt;= 40</text>
+  <text x="720" y="180" class="td">Name <tspan class="cd">"Ali Abbas"</tspan>, 450/500, 90.00%, Grade <tspan class="cd">"A+"</tspan>, Status <tspan class="cd">"Pass"</tspan></text>
+
+  <rect x="32" y="204" width="1096" height="52" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="46" y="234" class="cd">TC-02</text>
+  <text x="105" y="234" class="td">result_card_generator.py</text>
+  <text x="315" y="228" class="td">High marks (e.g. 95, 95, 95, 95, 35) → 83.00% average</text>
+  <text x="315" y="246" class="td">One subject is 35 (&lt; 40)</text>
+  <text x="720" y="234" class="td">Grade is <tspan class="cd">"A"</tspan> (83%), but Final Status is forced to <tspan class="cd">"Fail"</tspan></text>
+
+  <rect x="32" y="258" width="1096" height="52" fill="#fffefa" stroke="#e6e1d7"/>
+  <text x="46" y="288" class="cd">TC-03</text>
+  <text x="105" y="288" class="td">result_card_generator.py</text>
+  <text x="315" y="282" class="td">Roll <tspan class="cd">"12A4"</tspan> then <tspan class="cd">" 402 "</tspan>; marks <tspan class="cd">"abc"</tspan>, <tspan class="cd">"105"</tspan>, <tspan class="cd">"-1"</tspan>, then <tspan class="cd">"75"</tspan></text>
+  <text x="720" y="288" class="td">Re-prompts on non-digits or &lt;0 / &gt;100; accepts <tspan class="cd">"402"</tspan> &amp; <tspan class="cd">75</tspan></text>
+
+  <rect x="32" y="312" width="1096" height="52" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="46" y="342" class="cd">TC-04</text>
+  <text x="105" y="342" class="td">result_card_generator.py</text>
+  <text x="315" y="336" class="td">Boundary marks: 0 (fail subject) and 100 (max mark)</text>
+  <text x="720" y="342" class="td">0 and 100 accepted; 0 triggers <tspan class="cd">has_failed_subject = True</tspan> → <tspan class="cd">"Fail"</tspan></text>
+
+  <rect x="32" y="366" width="1096" height="52" fill="#fffefa" stroke="#e6e1d7"/>
+  <text x="46" y="396" class="cd">TC-05</text>
+  <text x="105" y="396" class="td">class_marks_analyzer.py</text>
+  <text x="315" y="390" class="td">5 students: Ali (85), Ahmed (45), Sara (95), Usman (60), Ayesha (75)</text>
+  <text x="720" y="396" class="td">Avg 72.00; Pass 4 (&gt;=50), Fail 1; High Sara (95), Low Ahmed (45)</text>
+
+  <rect x="32" y="420" width="1096" height="52" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="46" y="450" class="cd">TC-06</text>
+  <text x="105" y="450" class="td">class_marks_analyzer.py</text>
+  <text x="315" y="444" class="td">Above-average filter &amp; descending sort on sample class</text>
+  <text x="720" y="450" class="td">Above avg: Sara, Ali, Ayesha; Sorted: <tspan class="cd">[95, 85, 75, 60, 45]</tspan></text>
+
+  <rect x="32" y="474" width="1096" height="52" fill="#fffefa" stroke="#e6e1d7"/>
+  <text x="46" y="504" class="cd">TC-07</text>
+  <text x="105" y="504" class="td">class_marks_analyzer.py</text>
+  <text x="315" y="498" class="td">Count <tspan class="cd">"0"</tspan>, <tspan class="cd">"-2"</tspan>, <tspan class="cd">"x"</tspan> then <tspan class="cd">"2"</tspan>; tied highest marks (e.g. 90, 90)</text>
+  <text x="720" y="504" class="td">Count re-prompts until &gt; 0; tied top scorers both printed</text>
+
+  <rect x="32" y="528" width="1096" height="44" rx="8" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="46" y="555" class="cd">TC-08</text>
+  <text x="105" y="555" class="td">class_marks_analyzer.py</text>
+  <text x="315" y="555" class="td">All students score equal marks (e.g. 70, 70)</text>
+  <text x="720" y="555" class="td">Avg 70.00; prints "No students scored above the class average."</text>
+</svg>

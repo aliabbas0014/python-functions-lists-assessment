@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" role="img" aria-label="Overall Project Architecture Diagram">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="40%">
+      <stop offset="0%" stop-color="#183f65"/>
+      <stop offset="72%" stop-color="#245b8f"/>
+      <stop offset="100%" stop-color="#397aa9"/>
+    </linearGradient>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#245b8f"/>
+    </marker>
+    <style>
+      .title { font-family: Georgia, serif; font-size: 24px; font-weight: bold; fill: #ffffff; }
+      .sub { font-family: Inter, Arial, sans-serif; font-size: 13px; fill: #e3edf5; }
+      .sec { font-family: Inter, Arial, sans-serif; font-size: 12px; font-weight: 800; letter-spacing: 1.4px; fill: #245b8f; }
+      .h3 { font-family: Inter, Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #183f65; }
+      .txt { font-family: Inter, Arial, sans-serif; font-size: 13px; fill: #293747; }
+      .muted { font-family: Inter, Arial, sans-serif; font-size: 12px; fill: #718092; }
+      .code { font-family: Consolas, monospace; font-size: 12px; fill: #183f65; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="660" rx="20" fill="#f3f0e8"/>
+  <rect x="24" y="20" width="1152" height="84" rx="16" fill="url(#heroGrad)"/>
+  <text x="48" y="56" class="title">Project Architecture — Assessment 02</text>
+  <text x="48" y="80" class="sub">python-functions-lists-assessment · Two Independent Procedural Python Programs + Web Preview</text>
+
+  <rect x="24" y="124" width="760" height="508" rx="18" fill="#fffefa" stroke="#d9d2c5" stroke-width="1.5"/>
+  <text x="46" y="152" class="sec">REPOSITORY: PYTHON-FUNCTIONS-LISTS-ASSESSMENT</text>
+
+  <rect x="46" y="172" width="344" height="436" rx="14" fill="#f8f6f0" stroke="#245b8f" stroke-width="1.5"/>
+  <rect x="46" y="172" width="344" height="44" rx="14" fill="url(#heroGrad)"/>
+  <text x="64" y="199" class="title" font-size="16">1. result_card_generator.py</text>
+
+  <rect x="64" y="232" width="308" height="88" rx="10" fill="#fffefa" stroke="#e6e1d7"/>
+  <text x="78" y="254" class="h3" font-size="14">Helper &amp; Validation Functions</text>
+  <text x="78" y="275" class="code">format_name(name)</text>
+  <text x="78" y="294" class="code">get_valid_roll_number(), get_valid_marks(subject)</text>
+  <text x="78" y="312" class="muted">Input cleanup (.strip().title(), .isdigit(), 0..100)</text>
+
+  <rect x="64" y="334" width="308" height="84" rx="10" fill="#fffefa" stroke="#e6e1d7"/>
+  <text x="78" y="356" class="h3" font-size="14">Scoring &amp; Grading Functions</text>
+  <text x="78" y="377" class="code">calculate_percentage(total, max_total)</text>
+  <text x="78" y="396" class="code">get_grade(percentage)</text>
+  <text x="78" y="412" class="muted">Total out of 500; A+ down to Fail</text>
+
+  <rect x="64" y="432" width="308" height="158" rx="10" fill="#fffefa" stroke="#e6e1d7"/>
+  <text x="78" y="454" class="h3" font-size="14">Main Execution &amp; Rule Enforcement</text>
+  <text x="78" y="476" class="txt">• 5 subjects: English, Math, Computer,</text>
+  <text x="90" y="494" class="txt">Physics, Chemistry (dict: student_marks)</text>
+  <text x="78" y="516" class="txt">• Rule: any mark &lt; 40 forces final status "Fail"</text>
+  <text x="78" y="538" class="txt">• Prints formatted result card via f-strings</text>
+  <text x="78" y="566" class="muted">Standalone script · No shared state with Task 2</text>
+
+  <rect x="418" y="172" width="344" height="436" rx="14" fill="#f8f6f0" stroke="#245b8f" stroke-width="1.5"/>
+  <rect x="418" y="172" width="344" height="44" rx="14" fill="url(#heroGrad)"/>
+  <text x="436" y="199" class="title" font-size="16">2. class_marks_analyzer.py</text>
+
+  <rect x="436" y="232" width="308" height="88" rx="10" fill="#fffefa" stroke="#e6e1d7"/>
+  <text x="450" y="254" class="h3" font-size="14">Input &amp; Parallel Lists</text>
+  <text x="450" y="275" class="code">get_student_count(), get_valid_marks(name)</text>
+  <text x="450" y="294" class="code">student_names = []  |  student_marks = []</text>
+  <text x="450" y="312" class="muted">Populated sequentially via .append()</text>
+
+  <rect x="436" y="334" width="308" height="92" rx="10" fill="#fffefa" stroke="#e6e1d7"/>
+  <text x="450" y="356" class="h3" font-size="14">Analysis Functions &amp; Built-ins</text>
+  <text x="450" y="377" class="code">calculate_average(student_marks)</text>
+  <text x="450" y="396" class="code">display_highest_lowest(...), count_pass_fail(...)</text>
+  <text x="450" y="414" class="muted">Uses sum(), len(), max(), min(), sorted()</text>
+
+  <rect x="436" y="440" width="308" height="150" rx="10" fill="#fffefa" stroke="#e6e1d7"/>
+  <text x="450" y="462" class="h3" font-size="14">Main Execution &amp; Reporting</text>
+  <text x="450" y="484" class="txt">• Computes class average and pass (&gt;=50) / fail</text>
+  <text x="450" y="504" class="txt">• Lists high/low scorers and above-average students</text>
+  <text x="450" y="526" class="txt">• Sorts marks descending &amp; prints all records</text>
+  <text x="450" y="566" class="muted">Standalone CLI script · No database or OOP classes</text>
+
+  <rect x="808" y="124" width="368" height="244" rx="18" fill="#fffefa" stroke="#d9d2c5" stroke-width="1.5"/>
+  <text x="828" y="152" class="sec">RUNTIME &amp; I/O INTERFACE</text>
+  <rect x="828" y="168" width="328" height="180" rx="12" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="844" y="192" class="h3">Terminal / Console (Python 3)</text>
+  <text x="844" y="216" class="txt">• Interactive <tspan class="code">input()</tspan> prompts &amp; loops</text>
+  <text x="844" y="238" class="txt">• <tspan class="code">try / except ValueError</tspan> numeric guards</text>
+  <text x="844" y="260" class="txt">• Formatted console reports via <tspan class="code">print()</tspan></text>
+  <text x="844" y="290" class="muted">No external files, APIs, or SQL databases</text>
+
+  <rect x="808" y="388" width="368" height="244" rx="18" fill="#fffefa" stroke="#d9d2c5" stroke-width="1.5"/>
+  <text x="828" y="416" class="sec">COMPANION WEB SHOWCASE</text>
+  <rect x="828" y="432" width="328" height="180" rx="12" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="844" y="456" class="h3">demo.html (Static Preview)</text>
+  <text x="844" y="480" class="txt">• Tabbed showcase for Task 01 &amp; Task 02</text>
+  <text x="844" y="502" class="txt">• Illustrative sample data &amp; visual bars</text>
+  <text x="844" y="524" class="txt">• Blue hero gradient + #f3f0e8 paper theme</text>
+  <text x="844" y="554" class="muted">Client-side HTML/CSS/JS preview only</text>
+
+  <line x1="784" y1="260" x2="808" y2="260" stroke="#245b8f" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="784" y1="500" x2="808" y2="500" stroke="#245b8f" stroke-width="2" marker-end="url(#arrowBlue)"/>
+</svg>

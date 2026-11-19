@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 460" width="1120" height="460" role="img" aria-label="Testing Workflow Diagram for Assessment 02">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#183f65"/>
+      <stop offset="72%" stop-color="#245b8f"/>
+      <stop offset="100%" stop-color="#397aa9"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#245b8f"/>
+    </marker>
+    <style>
+      .t { font-family: Georgia, serif; font-size: 22px; font-weight: bold; fill: #ffffff; }
+      .s { font-family: Inter, Arial, sans-serif; font-size: 13px; fill: #e3edf5; }
+      .h { font-family: Inter, Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #183f65; }
+      .b { font-family: Inter, Arial, sans-serif; font-size: 12px; fill: #293747; }
+    </style>
+  </defs>
+
+  <rect width="1120" height="460" rx="20" fill="#f3f0e8"/>
+  <rect x="24" y="20" width="1072" height="72" rx="14" fill="url(#heroGrad)"/>
+  <text x="44" y="51" class="t">Testing Workflow — Assessment 02 Verification</text>
+  <text x="44" y="73" class="s">CLI test execution cycle across happy paths, boundary values, and invalid input recovery</text>
+
+  <rect x="36" y="120" width="242" height="296" rx="14" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="157" y="148" text-anchor="middle" class="h">1. Prepare Test Inputs</text>
+  <text x="52" y="176" class="b">• Select target script:</text>
+  <text x="64" y="196" class="b">result_card_generator.py or</text>
+  <text x="64" y="214" class="b">class_marks_analyzer.py</text>
+  <text x="52" y="246" class="b">• Include valid cases, 0/100</text>
+  <text x="64" y="264" class="b">boundaries, &lt;40 fail trigger,</text>
+  <text x="64" y="282" class="b">&amp; non-numeric / negative inputs</text>
+
+  <rect x="316" y="120" width="242" height="296" rx="14" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="437" y="148" text-anchor="middle" class="h">2. Run in Python 3 CLI</text>
+  <text x="332" y="176" class="b">• Execute script from terminal</text>
+  <text x="332" y="200" class="b">• Feed interactive prompts</text>
+  <text x="332" y="224" class="b">• Confirm try/except &amp; while</text>
+  <text x="344" y="242" class="b">True loops handle bad input</text>
+  <text x="344" y="260" class="b">without crashing</text>
+
+  <rect x="596" y="120" width="242" height="296" rx="14" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="717" y="148" text-anchor="middle" class="h">3. Verify Logic &amp; Lists</text>
+  <text x="612" y="176" class="b">• Task 1: percentage, grade,</text>
+  <text x="624" y="194" class="b">&lt;40 fail override, formatted</text>
+  <text x="624" y="212" class="b">result card alignment</text>
+  <text x="612" y="244" class="b">• Task 2: average, pass/fail</text>
+  <text x="624" y="262" class="b">counts, high/low names,</text>
+  <text x="624" y="280" class="b">above-avg &amp; sorted order</text>
+
+  <rect x="876" y="120" width="208" height="296" rx="14" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="980" y="148" text-anchor="middle" class="h">4. Record Results</text>
+  <text x="892" y="176" class="b">• Mark test cases Pass/Fail</text>
+  <text x="892" y="200" class="b">• Keep source files &amp;</text>
+  <text x="904" y="218" class="b">README untouched until</text>
+  <text x="904" y="236" class="b">ready for documentation</text>
+  <text x="904" y="254" class="b">update</text>
+
+  <line x1="278" y1="268" x2="316" y2="268" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="558" y1="268" x2="596" y2="268" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="838" y1="268" x2="876" y2="268" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+</svg>

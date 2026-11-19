@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 560" width="1120" height="560" role="img" aria-label="Input Validation Workflow Diagram">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#183f65"/>
+      <stop offset="72%" stop-color="#245b8f"/>
+      <stop offset="100%" stop-color="#397aa9"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#245b8f"/>
+    </marker>
+    <style>
+      .t { font-family: Georgia, serif; font-size: 22px; font-weight: bold; fill: #ffffff; }
+      .s { font-family: Inter, Arial, sans-serif; font-size: 13px; fill: #e3edf5; }
+      .h { font-family: Inter, Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #183f65; }
+      .b { font-family: Inter, Arial, sans-serif; font-size: 12px; fill: #293747; }
+      .c { font-family: Consolas, monospace; font-size: 11.5px; fill: #183f65; }
+    </style>
+  </defs>
+
+  <rect width="1120" height="560" rx="20" fill="#f3f0e8"/>
+  <rect x="24" y="20" width="1072" height="72" rx="14" fill="url(#heroGrad)"/>
+  <text x="44" y="51" class="t">Input Validation Workflow — Both Python Programs</text>
+  <text x="44" y="73" class="s">Retry loops, type/range guards, and string normalization used in actual source code</text>
+
+  <rect x="36" y="114" width="340" height="420" rx="14" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="206" y="142" text-anchor="middle" class="h">get_valid_marks() (Both Files)</text>
+  <rect x="52" y="160" width="308" height="54" rx="8" fill="#f8f6f0"/>
+  <text x="64" y="182" class="c">while True: try: marks = int(input(...))</text>
+  <text x="64" y="202" class="b">Reads prompt for subject or student_name</text>
+
+  <polygon points="206,236 336,274 206,312 76,274" fill="#fffefa" stroke="#d58b52" stroke-width="1.8"/>
+  <text x="206" y="271" text-anchor="middle" class="h" font-size="12.5">Valid int &amp;</text>
+  <text x="206" y="287" text-anchor="middle" class="h" font-size="12.5">0 &lt;= marks &lt;= 100?</text>
+
+  <rect x="52" y="336" width="144" height="76" rx="8" fill="#fbf2e8" stroke="#d58b52"/>
+  <text x="124" y="358" text-anchor="middle" class="h" font-size="12">Invalid</text>
+  <text x="124" y="376" text-anchor="middle" class="b">ValueError or</text>
+  <text x="124" y="392" text-anchor="middle" class="b">out of range → retry</text>
+
+  <rect x="216" y="336" width="144" height="76" rx="8" fill="#e8f2ed" stroke="#3c806b"/>
+  <text x="288" y="358" text-anchor="middle" class="h" font-size="12">Valid</text>
+  <text x="288" y="378" text-anchor="middle" class="c">return marks</text>
+  <text x="288" y="396" text-anchor="middle" class="b">(integer)</text>
+
+  <line x1="206" y1="214" x2="206" y2="236" stroke="#245b8f" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="160" y1="296" x2="124" y2="336" stroke="#245b8f" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="252" y1="296" x2="288" y2="336" stroke="#245b8f" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <rect x="394" y="114" width="332" height="420" rx="14" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="560" y="142" text-anchor="middle" class="h">get_valid_roll_number() (Task 1)</text>
+  <rect x="410" y="160" width="300" height="54" rx="8" fill="#f8f6f0"/>
+  <text x="422" y="182" class="c">roll = input("Enter roll number: ").strip()</text>
+  <text x="422" y="202" class="b">Inside while True loop</text>
+
+  <polygon points="560,236 686,274 560,312 434,274" fill="#fffefa" stroke="#d58b52" stroke-width="1.8"/>
+  <text x="560" y="278" text-anchor="middle" class="c">roll.isdigit()?</text>
+
+  <rect x="410" y="336" width="142" height="76" rx="8" fill="#fbf2e8" stroke="#d58b52"/>
+  <text x="481" y="358" text-anchor="middle" class="h" font-size="12">False</text>
+  <text x="481" y="376" text-anchor="middle" class="b">Prints error &amp;</text>
+  <text x="481" y="392" text-anchor="middle" class="b">prompts again</text>
+
+  <rect x="568" y="336" width="142" height="76" rx="8" fill="#e8f2ed" stroke="#3c806b"/>
+  <text x="639" y="358" text-anchor="middle" class="h" font-size="12">True</text>
+  <text x="639" y="378" text-anchor="middle" class="c">return roll</text>
+  <text x="639" y="396" text-anchor="middle" class="b">(digit string)</text>
+
+  <line x1="560" y1="214" x2="560" y2="236" stroke="#245b8f" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="514" y1="296" x2="481" y2="336" stroke="#245b8f" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="606" y1="296" x2="639" y2="336" stroke="#245b8f" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <rect x="744" y="114" width="340" height="420" rx="14" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="914" y="142" text-anchor="middle" class="h">Student Count &amp; Name Formatting</text>
+
+  <rect x="760" y="162" width="308" height="146" rx="10" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="772" y="184" class="c">get_student_count() (Task 2)</text>
+  <text x="772" y="206" class="b">• while True + try/except ValueError</text>
+  <text x="772" y="226" class="b">• Checks <tspan class="c">count &gt; 0</tspan> (at least 1 student)</text>
+  <text x="772" y="246" class="b">• Rejects &lt;= 0 or non-integers</text>
+  <text x="772" y="268" class="b">• Returns valid positive integer</text>
+
+  <rect x="760" y="324" width="308" height="140" rx="10" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="772" y="346" class="h" font-size="13">Name Formatting (.strip().title())</text>
+  <text x="772" y="368" class="b">• Task 1: <tspan class="c">format_name(name)</tspan> trims</text>
+  <text x="784" y="386" class="b">whitespace and title-cases name</text>
+  <text x="772" y="408" class="b">• Task 2: <tspan class="c">input(...).strip().title()</tspan></text>
+  <text x="784" y="426" class="b">before <tspan class="c">student_names.append(name)</tspan></text>
+</svg>

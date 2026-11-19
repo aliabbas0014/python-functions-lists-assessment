@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 540" width="1140" height="540" role="img" aria-label="Class Marks Analysis Data Processing Diagram">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#183f65"/>
+      <stop offset="72%" stop-color="#245b8f"/>
+      <stop offset="100%" stop-color="#397aa9"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#245b8f"/>
+    </marker>
+    <style>
+      .t { font-family: Georgia, serif; font-size: 22px; font-weight: bold; fill: #ffffff; }
+      .s { font-family: Inter, Arial, sans-serif; font-size: 13px; fill: #e3edf5; }
+      .h { font-family: Inter, Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #183f65; }
+      .b { font-family: Inter, Arial, sans-serif; font-size: 12.5px; fill: #293747; }
+      .c { font-family: Consolas, monospace; font-size: 12px; fill: #183f65; }
+    </style>
+  </defs>
+
+  <rect width="1140" height="540" rx="20" fill="#f3f0e8"/>
+  <rect x="24" y="20" width="1092" height="72" rx="14" fill="url(#heroGrad)"/>
+  <text x="44" y="51" class="t">Class Marks Data Processing — class_marks_analyzer.py</text>
+  <text x="44" y="73" class="s">How parallel lists feed statistical functions, filtering loops, and descending sort</text>
+
+  <rect x="36" y="122" width="240" height="384" rx="14" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="156" y="150" text-anchor="middle" class="h">1. Data Capture</text>
+  <rect x="52" y="170" width="208" height="76" rx="10" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="64" y="192" class="c">get_student_count()</text>
+  <text x="64" y="212" class="b">Loops 1..total_students</text>
+  <text x="64" y="232" class="b">Cleans name (.strip().title())</text>
+
+  <rect x="52" y="264" width="208" height="96" rx="10" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="64" y="286" class="c">student_names.append()</text>
+  <text x="64" y="308" class="c">student_marks.append()</text>
+  <text x="64" y="332" class="b">Aligned by index i</text>
+  <text x="64" y="350" class="b">Marks validated 0..100</text>
+
+  <rect x="314" y="122" width="252" height="384" rx="14" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="440" y="150" text-anchor="middle" class="h">2. Core Aggregations</text>
+  <rect x="330" y="170" width="220" height="84" rx="10" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="342" y="192" class="c">calculate_average()</text>
+  <text x="342" y="214" class="c">sum(marks) / len(marks)</text>
+  <text x="342" y="236" class="b">Class mean score</text>
+
+  <rect x="330" y="270" width="220" height="96" rx="10" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="342" y="292" class="c">display_highest_lowest()</text>
+  <text x="342" y="314" class="c">max(marks), min(marks)</text>
+  <text x="342" y="336" class="b">Matches tied/single names</text>
+  <text x="342" y="354" class="b">via index loop</text>
+
+  <rect x="330" y="382" width="220" height="84" rx="10" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="342" y="404" class="c">count_pass_fail()</text>
+  <text x="342" y="426" class="b">Pass: marks &gt;= 50</text>
+  <text x="342" y="446" class="b">Fail: marks &lt; 50</text>
+
+  <rect x="604" y="122" width="248" height="384" rx="14" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="728" y="150" text-anchor="middle" class="h">3. Filtering &amp; Ordering</text>
+  <rect x="620" y="170" width="216" height="120" rx="10" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="632" y="192" class="h" font-size="13">Above Average Filter</text>
+  <text x="632" y="214" class="c">marks[i] &gt; class_average</text>
+  <text x="632" y="236" class="b">Prints matching student</text>
+  <text x="632" y="256" class="b">&amp; score; tracks found_student</text>
+
+  <rect x="620" y="310" width="216" height="100" rx="10" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="632" y="332" class="h" font-size="13">Descending Sort</text>
+  <text x="632" y="354" class="c">sorted(marks, reverse=True)</text>
+  <text x="632" y="376" class="b">New sorted list (highest</text>
+  <text x="632" y="394" class="b">to lowest marks)</text>
+
+  <rect x="890" y="122" width="214" height="384" rx="14" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="997" y="150" text-anchor="middle" class="h">4. Console Reports</text>
+  <rect x="906" y="170" width="182" height="296" rx="10" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="918" y="196" class="b">• CLASS PERFORMANCE</text>
+  <text x="928" y="216" class="b">Average, Pass, Fail</text>
+  <text x="918" y="250" class="b">• Above-Average List</text>
+  <text x="918" y="284" class="b">• Sorted Marks List</text>
+  <text x="918" y="318" class="b">• ALL STUDENT RECORDS</text>
+  <text x="928" y="338" class="b">Every name &amp; mark</text>
+  <text x="918" y="372" class="b">• ANALYSIS COMPLETED</text>
+
+  <line x1="276" y1="280" x2="314" y2="280" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="566" y1="280" x2="604" y2="280" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="852" y1="280" x2="890" y2="280" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+</svg>

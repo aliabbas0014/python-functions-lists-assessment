@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" width="1100" height="560" role="img" aria-label="Grading and Pass/Fail Decision Flowchart">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#183f65"/>
+      <stop offset="72%" stop-color="#245b8f"/>
+      <stop offset="100%" stop-color="#397aa9"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#245b8f"/>
+    </marker>
+    <style>
+      .t { font-family: Georgia, serif; font-size: 22px; font-weight: bold; fill: #ffffff; }
+      .s { font-family: Inter, Arial, sans-serif; font-size: 13px; fill: #e3edf5; }
+      .h { font-family: Inter, Arial, sans-serif; font-size: 14px; font-weight: 700; fill: #183f65; }
+      .b { font-family: Inter, Arial, sans-serif; font-size: 12.5px; fill: #293747; }
+      .c { font-family: Consolas, monospace; font-size: 12px; font-weight: bold; fill: #183f65; }
+    </style>
+  </defs>
+
+  <rect width="1100" height="560" rx="20" fill="#f3f0e8"/>
+  <rect x="24" y="20" width="1052" height="72" rx="14" fill="url(#heroGrad)"/>
+  <text x="44" y="51" class="t">Grading &amp; Pass/Fail Logic — result_card_generator.py</text>
+  <text x="44" y="73" class="s">How get_grade(percentage) and the per-subject (&lt; 40) rule determine Grade and Final Status</text>
+
+  <rect x="36" y="116" width="500" height="414" rx="16" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="56" y="146" class="h">get_grade(percentage) Thresholds</text>
+  <text x="56" y="166" class="b">Evaluated sequentially via if / elif / else ladder:</text>
+
+  <rect x="56" y="184" width="460" height="42" rx="8" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="72" y="210" class="c">percentage &gt;= 90</text>
+  <text x="340" y="210" class="h">Grade: "A+"</text>
+
+  <rect x="56" y="234" width="460" height="42" rx="8" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="72" y="260" class="c">percentage &gt;= 80</text>
+  <text x="340" y="260" class="h">Grade: "A"</text>
+
+  <rect x="56" y="284" width="460" height="42" rx="8" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="72" y="310" class="c">percentage &gt;= 70</text>
+  <text x="340" y="310" class="h">Grade: "B"</text>
+
+  <rect x="56" y="334" width="460" height="42" rx="8" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="72" y="360" class="c">percentage &gt;= 60</text>
+  <text x="340" y="360" class="h">Grade: "C"</text>
+
+  <rect x="56" y="384" width="460" height="42" rx="8" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="72" y="410" class="c">percentage &gt;= 50</text>
+  <text x="340" y="410" class="h">Grade: "D"</text>
+
+  <rect x="56" y="434" width="460" height="42" rx="8" fill="#f8eae8" stroke="#b85e58"/>
+  <text x="72" y="460" class="c" fill="#b85e58">else (&lt; 50)</text>
+  <text x="340" y="460" class="h" fill="#b85e58">Grade: "Fail"</text>
+
+  <rect x="564" y="116" width="500" height="414" rx="16" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="584" y="146" class="h">Final Status Rule (Independent of Grade)</text>
+  <text x="584" y="166" class="b">Checks every subject mark in student_marks.values():</text>
+
+  <polygon points="814,192 984,242 814,292 644,242" fill="#fbf2e8" stroke="#d58b52" stroke-width="2"/>
+  <text x="814" y="239" text-anchor="middle" class="h">Any marks &lt; 40</text>
+  <text x="814" y="257" text-anchor="middle" class="b">in any of the 5 subjects?</text>
+
+  <rect x="596" y="328" width="200" height="72" rx="10" fill="#f8eae8" stroke="#b85e58" stroke-width="1.5"/>
+  <text x="696" y="354" text-anchor="middle" class="h" fill="#b85e58">YES → final_status = "Fail"</text>
+  <text x="696" y="376" text-anchor="middle" class="b">Breaks loop early; applies</text>
+  <text x="696" y="392" text-anchor="middle" class="b">even if % is &gt;= 50 (e.g. 90%)</text>
+
+  <rect x="832" y="328" width="204" height="72" rx="10" fill="#e8f2ed" stroke="#3c806b" stroke-width="1.5"/>
+  <text x="934" y="354" text-anchor="middle" class="h" fill="#3c806b">NO → final_status = "Pass"</text>
+  <text x="934" y="376" text-anchor="middle" class="b">Every subject is &gt;= 40;</text>
+  <text x="934" y="392" text-anchor="middle" class="b">note: % &lt; 50 still gives "Fail" grade</text>
+
+  <rect x="596" y="424" width="440" height="84" rx="10" fill="#f8f6f0" stroke="#e6e1d7"/>
+  <text x="612" y="448" class="h" font-size="13">Key Distinction in result_card_generator.py</text>
+  <text x="612" y="470" class="b">• <tspan class="c">Grade</tspan> comes strictly from overall percentage (&gt;= 50 needed for D).</text>
+  <text x="612" y="490" class="b">• <tspan class="c">Final Status</tspan> is "Fail" if any single subject is below 40, else "Pass".</text>
+
+  <line x1="740" y1="272" x2="696" y2="328" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="888" y1="272" x2="934" y2="328" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+</svg>

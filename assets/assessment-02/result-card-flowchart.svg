@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 680" width="1080" height="680" role="img" aria-label="Student Result Card Generator Flowchart">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#183f65"/>
+      <stop offset="72%" stop-color="#245b8f"/>
+      <stop offset="100%" stop-color="#397aa9"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#245b8f"/>
+    </marker>
+    <style>
+      .t { font-family: Georgia, serif; font-size: 22px; font-weight: bold; fill: #ffffff; }
+      .s { font-family: Inter, Arial, sans-serif; font-size: 13px; fill: #e3edf5; }
+      .b { font-family: Inter, Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #183f65; }
+      .sm { font-family: Inter, Arial, sans-serif; font-size: 11.5px; fill: #293747; }
+    </style>
+  </defs>
+
+  <rect width="1080" height="680" rx="20" fill="#f3f0e8"/>
+  <rect x="24" y="20" width="1032" height="72" rx="14" fill="url(#heroGrad)"/>
+  <text x="44" y="51" class="t">Flowchart — result_card_generator.py</text>
+  <text x="44" y="73" class="s">End-to-end execution flow for a single student across 5 subjects</text>
+
+  <rect x="60" y="122" width="380" height="44" rx="22" fill="#183f65"/>
+  <text x="250" y="149" text-anchor="middle" fill="#ffffff" class="b">Start &amp; format_name(input("Enter student name: "))</text>
+
+  <rect x="60" y="192" width="380" height="48" rx="10" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="250" y="221" text-anchor="middle" class="b">get_valid_roll_number() → .strip().isdigit()</text>
+
+  <rect x="60" y="266" width="380" height="62" rx="10" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="250" y="292" text-anchor="middle" class="b">Loop 5 Subjects: English, Math, Computer,</text>
+  <text x="250" y="312" text-anchor="middle" class="sm">Physics, Chemistry → get_valid_marks(subject) (0–100)</text>
+
+  <rect x="60" y="354" width="380" height="58" rx="10" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="250" y="379" text-anchor="middle" class="b">total_obtained = sum(student_marks.values())</text>
+  <text x="250" y="399" text-anchor="middle" class="sm">percentage = calculate_percentage(total_obtained, 500)</text>
+
+  <rect x="60" y="438" width="380" height="48" rx="10" fill="#fffefa" stroke="#245b8f" stroke-width="1.5"/>
+  <text x="250" y="467" text-anchor="middle" class="b">grade = get_grade(percentage)</text>
+
+  <polygon points="770,122 960,164 770,206 580,164" fill="#fffefa" stroke="#d58b52" stroke-width="2"/>
+  <text x="770" y="162" text-anchor="middle" class="b">Any subject mark</text>
+  <text x="770" y="179" text-anchor="middle" class="b">&lt; 40?</text>
+
+  <rect x="580" y="246" width="175" height="52" rx="10" fill="#fbf2e8" stroke="#d58b52" stroke-width="1.5"/>
+  <text x="667" y="277" text-anchor="middle" class="b">final_status = "Fail"</text>
+
+  <rect x="785" y="246" width="175" height="52" rx="10" fill="#e8f2ed" stroke="#3c806b" stroke-width="1.5"/>
+  <text x="872" y="277" text-anchor="middle" class="b">final_status = "Pass"</text>
+
+  <rect x="610" y="344" width="320" height="84" rx="12" fill="#fffefa" stroke="#245b8f" stroke-width="1.8"/>
+  <text x="770" y="371" text-anchor="middle" class="b">Print Formatted Result Card</text>
+  <text x="770" y="392" text-anchor="middle" class="sm">Name, Roll No., 5 Subject Marks, Total / 500,</text>
+  <text x="770" y="411" text-anchor="middle" class="sm">Percentage (.2f%), Grade &amp; Final Status</text>
+
+  <rect x="650" y="468" width="240" height="44" rx="22" fill="#183f65"/>
+  <text x="770" y="495" text-anchor="middle" fill="#ffffff" class="b">End Program</text>
+
+  <line x1="250" y1="166" x2="250" y2="192" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="250" y1="240" x2="250" y2="266" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="250" y1="328" x2="250" y2="354" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="250" y1="412" x2="250" y2="438" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <path d="M 440 462 L 520 462 L 520 164 L 580 164" fill="none" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="690" y1="190" x2="667" y2="246" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="646" y="222" class="sm" font-weight="700">Yes</text>
+  <line x1="850" y1="190" x2="872" y2="246" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="876" y="222" class="sm" font-weight="700">No</text>
+
+  <line x1="667" y1="298" x2="710" y2="344" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="872" y1="298" x2="830" y2="344" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="770" y1="428" x2="770" y2="468" stroke="#245b8f" stroke-width="1.8" marker-end="url(#arr)"/>
+</svg>
