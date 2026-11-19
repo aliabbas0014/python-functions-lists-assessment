@@ -1,44 +1,9 @@
  <div align="center">
 
 
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#172554"/>
-      <stop offset="50%" stop-color="#6d28d9"/>
-      <stop offset="100%" stop-color="#0891b2"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#67e8f9"/>
-      <stop offset="100%" stop-color="#c4b5fd"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="1200" height="280" rx="24" fill="url(#bg)"/>
-  <circle cx="1050" cy="40" r="150" fill="#ffffff" opacity=".06"/>
-  <circle cx="1100" cy="240" r="110" fill="#ffffff" opacity=".06"/>
-  <circle cx="100" cy="260" r="130" fill="#ffffff" opacity=".05"/>
-
-  <path d="M0 220 Q300 170 600 220 T1200 200" fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="2"/>
-
-  <text x="600" y="112" text-anchor="middle" fill="#ffffff"
-        font-family="Arial, sans-serif" font-size="46" font-weight="700">
-    Python Functions &amp; Lists
-  </text>
-
-  <rect x="460" y="137" width="280" height="4" rx="2" fill="url(#accent)"/>
-
-  <text x="600" y="181" text-anchor="middle" fill="#e0e7ff"
-        font-family="Arial, sans-serif" font-size="23">
-    BOOTCAMP ASSESSMENT 02
-  </text>
-
-  <text x="600" y="218" text-anchor="middle" fill="#dbeafe"
-        font-family="Arial, sans-serif" font-size="15">
-    FUNCTIONS  •  STRINGS  •  LISTS  •  DATA ANALYSIS
-  </text>
-</svg>
-
+<div align="center">
+<img src="./assets/assessment-02/header-banner.svg" width="100%" alt="Python Functions and Lists">
+</div>
 
 ### Python Bootcamp — Assessment 02
 
